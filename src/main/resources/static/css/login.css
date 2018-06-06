@@ -406,8 +406,9 @@ display: flex;
 }
 }*/
  @media (max-height: 710px) and (min-height: 100px) {
-     .doww{
-/*         text-align: center;*/
-    margin-top: -1px;
-/*    margin-left: -10%;*/
-}
+     .doww {
+         /*         text-align: center;*/
+         margin-top: -1px;
+         /*    margin-left: -10%;*/
+     }
+ }

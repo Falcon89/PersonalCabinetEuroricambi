@@ -1,0 +1,91 @@
+
+.modalBackground
+{
+    background-color: Gray;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.modalPopup
+{
+    background-color: White;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    width: 700px;
+}
+.resHead
+{
+    background-color: #1F9328;
+    empty-cells:show;
+    color: #ffffff;
+    padding: 3px 1px;
+}
+.row_rotate {
+   /*transform: rotate(180deg);
+  -ms-transform: rotate(180deg); 
+  -moz-transform: rotate(180deg); 
+  -webkit-transform: rotate(180deg); 
+  -o-transform: rotate(180deg);*/
+  resize:both;
+  vertical-align:central;
+  /*max-height:90%;*/
+  padding-left:inherit;
+}
+
+.row_norotate {
+resize:both;
+vertical-align:central;
+/*max-height:90%;*/
+
+}
+/* Vecchia impostazione grafica lista risultati
+.resRow
+{
+ border-bottom: #bbbbbb 1px solid; empty-cells:show; padding:10px 2px; font-size: 11px; vertical-align: top;
+}
+.resRowAlt
+{
+ border-bottom: #bbbbbb 1px solid; empty-cells:show; padding:10px 2px; font-size: 11px; vertical-align: top; background-color: #efefef;
+}
+.label_gray
+{
+ background-color:#999999; color:#FFFFFF; font-size:9px; line-height:18px; padding:1px 3px;
+}
+*/
+.resRow
+{
+ border-bottom:1px solid #BBBBBB; empty-cells:show; font-size:11px; padding:8px 0; vertical-align:top;
+}
+.resRowAlt
+{
+ background-color:#E6E6E6; border-bottom:1px solid #BBBBBB; empty-cells:show; font-size:11px; padding:8px 0px; vertical-align:top;
+}
+.label_gray
+{
+ color:#AAAAAA; font-size:9px;
+}
+
+
+.label
+{
+
+}
+
+.freccia_rossa
+{
+	background-position: left center;
+	background-image: url(../../images/freccia_rossa.gif);
+	background-repeat: no-repeat;
+	margin-left:10px;
+}
+
+.freccia_verde
+{
+	background-position: left center;
+	background-image: url(../../images/freccia_verde.gif);
+	background-repeat: no-repeat;
+	margin-left:10px;
+}
+
+

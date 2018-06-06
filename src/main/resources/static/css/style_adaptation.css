@@ -1,0 +1,39 @@
+.cent{
+
+}
+
+@media (min-width:10px) and (max-width:991px) {
+    .cart{background-color: none !important;}
+     .close_1{
+         display: none;
+    }
+    li.close_1{
+         display: none;
+    }
+   }
+
+@media (min-width:10px) and (max-width:440px) {
+    
+    .imgUp img{
+        margin-top: 0px;
+    }   
+}
+
+.log_color:hover{
+    color: red !important;
+}
+
+
+
+.b-tracker-admin {
+/*  font-family: 'Roboto', sans-serif;*/
+  width: 100%;
+  max-width: 800px;
+  margin: 25px auto;
+}
+.b-tracker-admin__row {
+  margin-bottom: 25px;
+}
+.md-datepicker-calendar-pane {
+  z-index: 1050 !important;
+}

@@ -1,0 +1,60 @@
+.half{width: 49.22%}
+.bg-green, .bg-blue{height: 178px}
+.video{height: 282px; overflow: hidden}
+.row{float: none}
+h1{padding-top: 0px}
+.bg-grey h1{padding-top: 15px}
+
+
+/*/stili per la gallery chi siamo e home//*/
+.gallery-chi-siamo, .gallery-chi-siamo-home{
+     width: 915px;
+     margin: 0 auto
+}
+.gallery-chi-siamo .col-8 ,.gallery-chi-siamo .col-6,  .gallery-chi-siamo .col-5, .gallery-chi-siamo .col-4, .gallery-chi-siamo .col-3 {  padding-left:0px}
+.gallery-chi-siamo .col-8 {
+  width: 614px;
+}
+.gallery-chi-siamo .col-6 {
+   width: 465px;  
+}
+.gallery-chi-siamo .col-5-2 {
+  width: 380px; height: 408px; float: left
+}
+.gallery-chi-siamo .col-5{
+  width: 380px;
+}
+.gallery-chi-siamo .col-4 {
+  width: 300px; height: 204px
+}
+
+.gallery-chi-siamo .col-4-2{
+    width: 300px; height: 380px; overflow: hidden; float: left
+}  
+  
+.gallery-chi-siamo .col-3 {
+  width: 220px; height: 204px 
+}
+.gallery-chi-siamo-home .col-6,   .gallery-chi-siamo-home .col-3 {  padding-left:0px}
+
+.gallery-chi-siamo-home .col-6 {
+   width: 457px;  
+}
+  
+.gallery-chi-siamo-home .col-3 {
+  width: 228px;  height: 170px
+}
+.gallery-chi-siamo-home .testo-gallery{ padding: 0; font-size: 12px; line-height: 18px;}
+.gallery-chi-siamo-home 
+.mappa-html{ display: none!important}
+.mappa-flash{display:block}
+#mapdiv{display:none!important}
+
+.gallery-storia .col-8 {width: 600px}
+.gallery-storia .col-4{width: 200px;}
+.gallery-storia .flex-viewport{width: 820px; margin: 0 auto}
+.slider-home ul.slides{margin-top: 60px!important}
+.container_special_news{padding-top: 60px}
+.container {
+    width: 965px;
+}

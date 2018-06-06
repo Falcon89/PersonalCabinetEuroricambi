@@ -1,0 +1,73 @@
+#header{position:absolute; top:0px; left:0px}
+.half{width: 49.22%}
+.bg-green, .bg-blue{height: 178px}
+.video{height: 282px; overflow: hidden}
+.row{float: none}
+h1{padding-top: 20px}
+.bg-grey h1{padding-top: 15px}
+.contact-form {margin-top:20px}
+.contact-form h1{padding-top: 0px}
+.gallery-qualita{width: 495px}
+/*/stili per la gallery chi siamo e home//*/
+.gallery-chi-siamo, .gallery-chi-siamo-home{
+     width: 915px;
+     margin: 0 auto
+}
+.gallery-chi-siamo .col-8 ,.gallery-chi-siamo .col-6,  .gallery-chi-siamo .col-5, .gallery-chi-siamo .col-4, .gallery-chi-siamo .col-3 {  padding-left:0px}
+.gallery-chi-siamo .col-8 {
+  width: 614px;
+}
+.gallery-chi-siamo .col-6 {
+   width: 465px;  
+}
+.gallery-chi-siamo .col-5-2 {
+  width: 380px; height: 408px; float: left
+}
+.gallery-chi-siamo .col-5{
+  width: 380px;
+}
+.gallery-chi-siamo .col-4 {
+  width: 300px; height: 204px
+}
+
+.gallery-chi-siamo .col-4-2{
+    width: 300px; height: 380px; overflow: hidden; float: left
+}  
+  
+.gallery-chi-siamo .col-3 {
+  width: 220px; height: 204px 
+}
+.gallery-chi-siamo-home .col-6,   .gallery-chi-siamo-home .col-3 {  padding-left:0px}
+
+.gallery-chi-siamo-home .col-6 {
+   width: 457px;  
+}
+  
+.gallery-chi-siamo-home .col-3 {
+  width: 228px;  height: 170px
+}
+.gallery-chi-siamo-home .testo-gallery{ padding: 0; font-size: 12px; line-height: 18px;}
+.gallery-chi-siamo-home 
+.mappa-html{display:none}
+.mappa-flash{display:block}
+#mapdiv{display:none!important}
+
+.gallery-storia .col-8 {width: 600px}
+.gallery-storia .col-4{width: 200px; padding-left:0px }
+.gallery-storia .flex-viewport{width: 820px; margin: 0 auto}
+.slider-home ul.slides{margin-top: 60px!important}
+.txt-img-slide{margin-left:24%!important}
+
+
+/*/navigazione/*/
+ul.dropdown li a { padding: 7px 8px 12px 8px; }
+ul.navigation{width: 625px}
+#loginButton span{ padding:30px 10px 11px 10px}
+ul.dropdown ul{margin-left: 0px!important}
+.col-1 .row, .col-2 .row, .col-3 .row, .col-4 .row, .col-5 .row, .col-6 .row, .col-7 .row, .col-8 .row, .col-9 .row, .col-10 .row, .col-11 .row, .col-12 .row{ margin-left: -15px}
+.container {
+    width: 965px;
+}
+.row {
+    margin-left:0px;
+}
