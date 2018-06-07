@@ -17,5 +17,8 @@ public class UserController {
         return "login";
     }
 
+    @GetMapping("/userProfil")
+    public String userProfil(){return  "userProfil";}
+
 
 }
