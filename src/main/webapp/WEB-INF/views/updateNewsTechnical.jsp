@@ -28,60 +28,19 @@
 
     <div class="main-panel">
         <jsp:include page="headerUpMenu.jsp"/>
+
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
-
-
-                    <div class="col-lg-12 col-sm-12">
-
-                        <div class="header">
-                            <h4 class="title"> Список новини</h4>
-                        </div>
-
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th class="" style="width: 30%">Назва новини</th>
-                                <th class="" style="width: 10%">Дата новини</th>
-                                <th class="" style="width: 46%">Текст новини</th>
-                                <th class="">Редагувати/Видалити</th>
-
-
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td style="text-align:center;" class="">1</td>
-                                <td class="">user123</td>
-                                <td style="text-align:center;" class="">123@hotmail.com</td>
-
-                                <td style="text-align:center;">
-                                    <!--                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" contenteditable="false">Edit</button>-->
-                                    <a href="${pageContext.request.contextPath}/updateNewsTechnical"> <button class="btn btn-success" contenteditable="false">Edit</button></a>
-                                    <button class="btn btn-danger" contenteditable="false">Delete</button>
-                                </td>
-                            </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-
-
-
-
-
-
-
                     <div class="col-lg-12 col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Додавання новини</h4>
+                                <h4 class="title">Редагування технічної новини</h4>
                             </div>
                             <div class="content">
                                 <form>
                                     <div class="row">
+
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
@@ -94,13 +53,15 @@
                                                 <input type="email" class="form-control border-input" placeholder="01.06.2018">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Додати фото</label>
-                                                <input class="form-control border-input" type="file" name="f">
+                                        <!--
+                                                                                    <div class="col-md-3">
+                                                                                    <div class="form-group">
+                                                                                         <label for="exampleInputEmail1">Додати фото</label>
+                                                                                 <input class="form-control border-input" type="file" name="f">
 
-                                            </div>
-                                        </div>
+                                                                            </div>
+                                                                                </div>
+                                        -->
                                     </div>
 
                                     <div class="row">
@@ -112,7 +73,7 @@
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-success  btn-wd">Добавити</button>
+                                        <button type="submit" class="btn btn-success  btn-wd">Зберегти</button>
                                     </div>
                                     <div class="clearfix"></div>
                                 </form>
@@ -124,7 +85,6 @@
                 </div>
             </div>
         </div>
-
         <jsp:include page="footer.jsp"/>
 
     </div>

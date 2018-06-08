@@ -11,8 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Admin panel Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -92,7 +90,7 @@
                                                                         <td class="cellacata">
                                                                             <div id="ctl00_cphAction_dlCataloghi_ctl00_pnlLink">
 
-                                                                                <a href="catalogueCaterpillar.html" target="_blank">
+                                                                                <a href="${pageContext.request.contextPath}/catalogueCaterpillar" target="_blank">
                                                                                     <img class="cellacataimg1" src="images/layout/pdf.gif" alt="pdf" />CATERPILLAR
 
                                                                                     <strong>
@@ -117,7 +115,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl08_pnlLink">
 
-                                                                            <a href="catalogueMarcedesBenz2.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueMarcedesBenzTwo" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />Mercedes-Benz
 
                                                                                 <strong>
@@ -142,7 +140,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl15_pnlLink">
 
-                                                                            <a href="catalogueZFTransmissions1.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueZFTransmissionsOne" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/pdf.gif" alt="pdf" />ZF Transmissions
 
                                                                                 <strong>
@@ -169,7 +167,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl01_pnlLink">
 
-                                                                            <a href="catalogueDaf.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueDaf" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />DAF
 
                                                                                 <strong>
@@ -194,7 +192,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl09_pnlLink">
 
-                                                                        <a href="catalogueMarcedesBenz3.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueMarcedesBenzThree" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />Mercedes-Benz
 
                                                                             <strong>
@@ -219,7 +217,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl16_pnlLink">
 
-                                                                        <a href="catalogueZFTransmissions2.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueMarcedesBenzTwo" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />ZF Transmissions
 
                                                                             <strong>
@@ -246,7 +244,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl02_pnlLink">
 
-                                                                            <a href="catalogueDana.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueDana" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />DANA (Eaton Axles)
 
                                                                                 <strong>
@@ -271,7 +269,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl10_pnlLink">
 
-                                                                        <a href="catalogueRenaultTrucks.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueRenaultTrucks" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />Renault Trucks
                                                                             <img src="images/cataloghi/euroamg.gif" id="ctl00_cphAction_dlCataloghi_ctl10_imgEuroAmGears" class="cellacataimg2" alt="Euroricambi-AMGears" />
                                                                             <strong>
@@ -296,7 +294,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl17_pnlLink">
 
-                                                                        <a href="catalogueZFTransmissions3.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueZFTransmissionsThree" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />ZF Transmissions
 
                                                                             <strong>
@@ -323,7 +321,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl03_pnlLink">
 
-                                                                            <a href="catalogueIveco.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueIveco" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />IVECO
 
                                                                                 <strong>
@@ -348,7 +346,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl11_pnlLink">
 
-                                                                        <a href="catalogueScania.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueScania" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />SCANIA
 
                                                                             <strong>
@@ -373,7 +371,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl18_pnlLink">
 
-                                                                        <a href="catalogueZFTransmissions4.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueZFTransmissionsFour" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />ZF Transmissions
 
                                                                             <strong>
@@ -400,7 +398,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl04_pnlLink">
 
-                                                                            <a href="catalogueFullerTr.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueFulleTr" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />FULLER Transmissions Heavy Duty
 
                                                                                 <strong>
@@ -425,7 +423,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl12_pnlLink">
 
-                                                                        <a href="catalogueMeritor.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueMeritor" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />MERITOR
 
                                                                             <strong>
@@ -450,7 +448,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl19_pnlLink">
 
-                                                                        <a href="catalogueZFTransmissions5.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueZFTransmissionsFive" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />ZF Transmissions
 
                                                                             <strong>
@@ -477,7 +475,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl05_pnlLink">
 
-                                                                            <a href="catalogueFulleMid.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueFulleMid" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />FULLER Mid Range & Twin Splitter
 
                                                                                 <strong>
@@ -502,7 +500,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl13_pnlLink">
 
-                                                                        <a href="catalogueVolvo.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueVolvo" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />VOLVO
 
                                                                             <strong>
@@ -527,7 +525,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl20_pnlLink">
 
-                                                                        <a href="catalogueCrown.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueCrown" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/pdf.gif" alt="pdf" />CROWN WHEELS AND PINIONS
 
                                                                             <strong>
@@ -554,7 +552,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl06_pnlLink">
 
-                                                                            <a href="catalogueMan.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueMan" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />MAN Differential
 
                                                                                 <strong>
@@ -579,7 +577,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl14_pnlLink">
 
-                                                                        <a href="catalogueVolvoCe.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueVolvoCe" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/pdf.gif" alt="pdf" />VOLVO CE
 
                                                                             <strong>
@@ -604,7 +602,7 @@
                                                                 <td class="cellacata">
                                                                     <div id="ctl00_cphAction_dlCataloghi_ctl21_pnlLink">
 
-                                                                        <a href="catalogueGenerallist.html" target="_blank">
+                                                                        <a href="${pageContext.request.contextPath}/catalogueGenerallist" target="_blank">
                                                                             <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />GENERAL LIST & ANNUAL NEWS
 
                                                                             <strong>
@@ -631,7 +629,7 @@
                                                                     <td class="cellacata">
                                                                         <div id="ctl00_cphAction_dlCataloghi_ctl07_pnlLink">
 
-                                                                            <a href="catalogueMarcedesBenz1.html" target="_blank">
+                                                                            <a href="${pageContext.request.contextPath}/catalogueMarcedesBenzOne" target="_blank">
                                                                                 <img class="cellacataimg1" src="images/layout/web.gif" alt="web" />Mercedes-Benz
 
                                                                                 <strong>

@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Admin panel Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -60,7 +60,7 @@
 
                                 <td style="text-align:center;">
                                     <!--                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" contenteditable="false">Edit</button>-->
-                                    <a href="updateNews.html"><button class="btn btn-success" contenteditable="false">Edit</button></a>
+                                    <a href="${pageContext.request.contextPath}/newsEditing"><button class="btn btn-success" contenteditable="false">Edit</button></a>
                                     <button class="btn btn-danger" contenteditable="false">Delete</button>
                                 </td>
                             </tr>

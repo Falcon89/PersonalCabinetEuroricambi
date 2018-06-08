@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController {
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String index (){
         return "index";
     }
 
-    @PostMapping("/")
-    public String indexAfterLogin(){return "redirect:/";
+    @PostMapping("/index")
+    public String indexAfterLogin(){return "redirect:/index";
     }
 }

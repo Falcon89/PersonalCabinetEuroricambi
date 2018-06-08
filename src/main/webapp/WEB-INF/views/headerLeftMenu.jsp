@@ -24,49 +24,49 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="index.html">
+                    <a href="${pageContext.request.contextPath}/index">
                         <i class="ti-home"></i>
                         <p>Головна</p>
                     </a>
                 </li>
                 <li>
-                    <a href="user.html">
+                    <a href="${pageContext.request.contextPath}/userProfil">
                         <i class="ti-user close_1"></i>
                         <p>Профіль користувача</p>
                     </a>
                 </li>
                 <li>
-                    <a href="catalogue.html">
+                    <a href="${pageContext.request.contextPath}/catalogue">
                         <i class="ti-view-list-alt close_1"></i>
                         <p>Каталог Euroricambi</p>
                     </a>
                 </li>
                 <li>
-                    <a href="technicalInformation.html">
+                    <a href="${pageContext.request.contextPath}/newsTechnicallInformation">
                         <i class="ti-comment-alt close_1"></i>
                         <p>Технічна інформація</p>
                     </a>
                 </li>
 
                 <li>
-                    <a href="news.html">
+                    <a href="${pageContext.request.contextPath}/news">
                         <i class="ti-bell close_1"></i>
                         <p>Новини</p>
                     </a>
                 </li>
                 <li>
-                    <a href="admin.html">
+                    <a href="${pageContext.request.contextPath}/newsEditing">
                         <i class="ti-bell+ close_1"></i>
                         <p>Адміністрування</p>
                     </a>
                 </li>
                 <li class="close_1">
-                    <a class="boton-icono log_color" href="#" title="Вийти"><i class="fa fa-sign-out " aria-hidden="true"></i>
+                    <a class="boton-icono log_color" href="/login" title="Вийти"><i class="fa fa-sign-out " aria-hidden="true"></i>
                         <p>Вийти</p>
                     </a>
                 </li>
                 <li class="active-pro close_1">
-                    <a href="#">
+                    <a href="http://euroricambi.com.ua">
                         <p>Перейти на головний сайт</p>
                     </a>
                 </li>

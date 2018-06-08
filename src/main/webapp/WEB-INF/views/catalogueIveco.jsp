@@ -29,19 +29,15 @@
     <div class="main-panel">
         <jsp:include page="headerUpMenu.jsp"/>
         <div class="content">
+
             <div class="container-fluid">
+
                 <div class="row">
+                    <div class="col-lg-12 col-sm-12">
 
-                    <div class="col-lg-6 col-sm-6">
-
-                        <div class="header">
-                            <h4 class="title"> Редагування новин</h4>
-                        </div>
-
-                        <a href="${pageContext.request.contextPath}/addNewsTechnical"> <button type="button" class="btn btn-success">Технічна інформація</button></a>
-                        <a href="${pageContext.request.contextPath}/addNews">   <button type="button" class="btn btn-success">Новини</button></a>
+                        <iframe  target="_parent" frameborder="0" allowfullscreen="" src="http://www.euroricambi.com/catalplus/30_02/index.html" width="100%" height="950px" style="margin-top: -140px">
+                        </iframe>
                     </div>
-
                 </div>
             </div>
         </div>
