@@ -60,7 +60,7 @@
 
                                 <td style="text-align:center;">
                                     <!--                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" contenteditable="false">Edit</button>-->
-                                    <a href="${pageContext.request.contextPath}/newsEditing"><button class="btn btn-success" contenteditable="false">Edit</button></a>
+                                    <a href="${pageContext.request.contextPath}/updateNews"><button class="btn btn-success" contenteditable="false">Edit</button></a>
                                     <button class="btn btn-danger" contenteditable="false">Delete</button>
                                 </td>
                             </tr>

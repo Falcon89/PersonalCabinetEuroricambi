@@ -54,12 +54,14 @@
                         <p>Новини</p>
                     </a>
                 </li>
+<sec:authorize access="hasRole('ROLE_ADMIN')">
                 <li>
                     <a href="${pageContext.request.contextPath}/newsEditing">
                         <i class="ti-bell+ close_1"></i>
                         <p>Адміністрування</p>
                     </a>
                 </li>
+</sec:authorize>
                 <li class="close_1">
                     <a class="boton-icono log_color" href="/login" title="Вийти"><i class="fa fa-sign-out " aria-hidden="true"></i>
                         <p>Вийти</p>
