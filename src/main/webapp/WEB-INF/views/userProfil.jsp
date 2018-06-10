@@ -3,7 +3,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
-<%@page session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,6 +109,8 @@
                             <div class="header">
                                 <h4 class="title">Менеджер з продаж</h4>
                             </div>
+
+
                             <div class="content">
                                 <ul class="list-unstyled team-members">
                                     <li>
@@ -137,6 +138,7 @@
 
                                 </ul>
                             </div>
+
                         </div>
 
 
@@ -263,14 +265,12 @@
                                 <h4 class="title">Надіслати повідомлення(Запит)</h4>
                             </div>
                             <div class="content">
-                                <form>
-
-
+<form:form action="SendMaseegeManager" method="post">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Заголовок</label>
-                                                <input type="text" class="form-control border-input"   placeholder="Home Address" value="Львів, Україна">
+                                                <input type="text" name="title" class="form-control border-input"   placeholder="Home Address" value="Львів, Україна">
                                             </div>
                                         </div>
                                     </div>
@@ -278,7 +278,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Від кого</label>
-                                                <input type="text" class="form-control border-input"   placeholder="Home Address" value="Іванов Іван Іванович">
+                                                <input type="text" name="userName" class="form-control border-input"   placeholder="Home Address" value="Іванов Іван Іванович">
                                             </div>
                                         </div>
                                     </div>
@@ -286,7 +286,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Опис</label>
-                                                <textarea rows="10" cols="45" type="text" class="form-control border-input"   placeholder="Текст для менеджера" value=""> </textarea>
+                                                <textarea rows="10" cols="45" type="text" name="message" class="form-control border-input"   placeholder="Текст для менеджера" value=""> </textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +298,7 @@
                                         <button type="reset" class="btn btn-danger" data-dismiss="modal">Закрити</button>
                                         <button type="submit" class="btn btn-primary">Надіслати</button>
                                     </div>
-                                </form>
+</form:form>
                             </div>
                         </div>
                     </div>
