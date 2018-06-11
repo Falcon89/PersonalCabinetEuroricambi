@@ -80,24 +80,25 @@
                                 <h4 class="title">Додавання новини</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form action="./saveNewsTechnical?${_csrf.parameterName}=${_csrf.token}" method="post" accept-charset="UTF-8"
+                                      enctype="multipart/form-data" class="form-horizontal form-label-left">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
-                                                <input type="text" class="form-control border-input" placeholder="Назва новини" >
+                                                <input type="text" name="title" class="form-control border-input" placeholder="Назва новини" >
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Дата новини</label>
-                                                <input type="email" class="form-control border-input" placeholder="01.06.2018">
+                                                <input type="text" name="date" class="form-control border-input" placeholder="01.06.2018">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Додати фото</label>
-                                                <input class="form-control border-input" type="file" name="f">
+                                                <input class="form-control border-input" type="file"  name="file">
 
                                             </div>
                                         </div>
@@ -107,7 +108,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" class="form-control border-input" placeholder="Текст новини" ></textarea>
+                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини" ></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -115,6 +116,7 @@
                                         <button type="submit" class="btn btn-success  btn-wd">Добавити</button>
                                     </div>
                                     <div class="clearfix"></div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                 </form>
                             </div>
                         </div>

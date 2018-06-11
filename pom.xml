@@ -6,7 +6,7 @@
 	<groupId>com.login.Euroricambi</groupId>
 	<artifactId>loginEuroricambi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>loginEuroricambi</name>
 	<description>Demo project for Spring Boot</description>
@@ -22,8 +22,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<jaxb.version>2.3.0</jaxb.version>
-		<jaxws.version>2.3.0</jaxws.version>
+		<!--<jaxb.version>2.3.0</jaxb.version>-->
+		<!--<jaxws.version>2.3.0</jaxws.version>-->
 	</properties>
 
 	<dependencies>
@@ -206,6 +206,21 @@
 			<artifactId>commons-collections</artifactId>
 			<version>3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>4.3.17.RELEASE</version>
+		</dependency>
+
+
+
 
 	</dependencies>
 

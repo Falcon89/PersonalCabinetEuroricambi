@@ -4,6 +4,7 @@ import com.login.Euroricambi.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
@@ -74,4 +75,11 @@ public class MailManagerController {
         }
         return builder.toString();
     }
+
+
+
+
+    @RequestMapping("/mailThank")
+    public String mailThank(){return "mailThank";}
+
 }

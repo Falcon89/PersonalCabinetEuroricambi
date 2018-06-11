@@ -1,4 +1,4 @@
-package com.login.Euroricambi.serviceImp;
+package com.login.Euroricambi.serviceImpl;
 
 import com.login.Euroricambi.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
