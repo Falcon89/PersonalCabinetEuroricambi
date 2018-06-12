@@ -18,7 +18,7 @@
     <div class="sidebar" data-background-color="white" data-active-color="danger">
         <div class="sidebar-wrapper">
             <div class="logo">
-                <a href="#" class="simple-text"><img src="assets/img/euroricambi_log.png" width="100%">
+                <a href="#" class="simple-text"><img src="${pageContext.request.contextPath}/assets/img/euroricambi_log.png" width="100%">
                 </a>
             </div>
 

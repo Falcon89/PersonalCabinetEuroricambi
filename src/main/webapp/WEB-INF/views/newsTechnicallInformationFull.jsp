@@ -32,29 +32,15 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <!--
-                          <div class=" col-sm-12 col-md-5 col-lg-5">
-
-                            </div>
-                    -->
                     <div class=" col-sm-12 col-md-12 col-lg-10">
-                        <!--  		<div class="col-md-8 col-md-offset-2 no-padding">-->
-
                         <article class="single-post">
                             <div class="post-header">
-                                <h2><a href="#">Продовжуємо тісну співпрацю з Euroricambi</a></h2>
-                                <!--								<span> 30.05.2018 </span>-->
+                                <h2><a href="#">${newsTechnical.title}</a></h2>
                             </div>
                             <br>
                             <div class="post-content ">
-                                <a href="#"><img src="/images/news_euro.jpg" alt="" class="img-responsive"></a>
-                                <p class="text-centr">Делегація компанії Strans з робочим візитом відвідала фабрику компанії Euroricambi що знаходиться в місті Болонья Італія .
-
-                                    http://www.euroricambi.com
-                                    Euroricambi - визнаний бренд у світі запчастин до КПП і АКПП для вантажівок європейського виробництва.
-                                    Компанія Странс є найбільшим дистрибютором запчастин до коробок передач для вантажних автомобілів в Україні по бренду Єврорікамбі ( Euroricambi )
-                                    Протягом візиту на виробництво Euroricambi ми особисто переконалися у високих стандартах виробництва запчастин .
-                                    Цей візит має велике значення для нашої компанії, адже досягнуто домовленостей про поглиблення співпраці. Завдяки цьому наші клієнти зможуть отримати якісні запчастини до своїх вантажівок за ще доступнішими цінами.</p>
+                                <a href="#"><img src="${newsTechnical.fotonews}" alt="" class="img-responsive"></a>
+                                <p class="text-centr">${newsTechnical.text}</p>
                                 <p>www.strans.ua </p>
 
                             </div>

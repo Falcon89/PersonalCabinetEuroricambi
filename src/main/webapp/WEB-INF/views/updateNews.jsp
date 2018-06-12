@@ -38,19 +38,19 @@
                                 <h4 class="title">Редагування технічної новини</h4>
                             </div>
                             <div class="content">
-                                <form>
+                                <form action="/updateNewsPage/${news.id}" method="post" accept-charset="UTF-8" novalidate="novalidate">
                                     <div class="row">
 
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
-                                                <input type="text" class="form-control border-input" placeholder="Назва новини" >
+                                                <input type="text" class="form-control border-input" name="title" value="${news.title}" >
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Дата новини</label>
-                                                <input type="email" class="form-control border-input" placeholder="01.06.2018">
+                                                <label>Дата новини</label>
+                                                <input type="email" class="form-control border-input" name="date" value="${news.date}">
                                             </div>
                                         </div>
 
@@ -60,7 +60,9 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" class="form-control border-input" placeholder="Текст новини" ></textarea>
+                                                <textarea rows="10" class="form-control border-input" type="text" name="text">
+                                                    <c:out value="${news.text}"/>
+                                                </textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -68,6 +70,7 @@
                                         <button type="submit" class="btn btn-success  btn-wd">Зберегти</button>
                                     </div>
                                     <div class="clearfix"></div>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                                 </form>
                             </div>
                         </div>

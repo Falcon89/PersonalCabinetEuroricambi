@@ -34,116 +34,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-4 col-sm-12">
-                        <div class="card card-user">
-                            <div class="image imgUp">
-                                <img src="images/log_us.jpg" alt="..."/>
-                            </div>
-                            <div class="content">
-                                <div class="author">
-                                    <img class="avatar border-white" src="images/user_log.png" alt="..."/>
-                                    <h4 class="title">Иванов Иван Иванович<br />
-                                        <!--                                     <a href="#"><small>@E-mail</small></a>-->
-                                    </h4>
-                                </div>
-                                <!--
-                                                                <p class="description text-center">
-                                                                    "Текст"
-                                                                </p>
-                                -->
-                            </div>
-                            <hr>
-                            <div class="text-center">
-                                <div class="row">
-                                    <div class="col-md-3 col-md-offset-1">
-                                        <h5>
-                                            <strong class="point_collro">133 666<br/>
-                                            </strong>Сальдо</h5>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h5><strong class="point_collro">250 000<br/>
-                                        </strong>Ліміт</h5>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h5><strong class="point_collro">21<br/>
-                                        </strong>Термін</h5>
-                                    </div>
-                                </div>
-                                <div class="row">
-
-                                    <div class="col-md-12">
-                                        <h5>Безготовковий перерахунок<br /></h5>
-                                        Спосіб оплати
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
 
 
+                        <jsp:include page="userDetailTerrasoft.jsp"/>
 
-
-
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-5">
-                                        <div class="icon-big icon-warning text-center">
-                                            <img src="images/1_euro.svg" width="80%">
-                                            <!--                                            <i class="ti-server"></i>-->
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-7">
-                                        <div class="numbers">
-                                            <p>Мої бали по euroricambi</p>
-                                            <strong class="point_collro"> 1 050</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr />
-                                    <div class="stats">
-                                        <a href="index.html"> <i class="ti-reload"></i></a><b> Оновити</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Менеджер з продаж</h4>
-                            </div>
-                            <div class="content">
-                                <ul class="list-unstyled team-members">
-                                    <li>
-                                        <div class="row">
-                                            <div class="col-xs-2">
-                                                <div class="avatar">
-                                                    <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-4">
-                                                <h6>Анатолій</h6>
-
-                                                <span class="text-success">Euroricambi</span>
-                                            </div>
-
-
-                                            <div class="col-xs-6 text-right">
-                                                Надіслати запит
-
-                                                <a href="#" class="btn btn-sm btn-success btn-icon" data-toggle="modal" data-target="#basicModal"><i class="fa fa-envelope"></i></a>
-
-                                            </div>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-                        </div>
+                        <jsp:include page="ePointsTerrasoft.jsp"/>
+                        <jsp:include page="managerRequestOne.jsp"/>
 
 
 
@@ -319,6 +215,8 @@
         </div>
         <jsp:include page="footer.jsp"/>
 
+
+        <jsp:include page="managerReques.jsp"/>
     </div>
 </div>
 

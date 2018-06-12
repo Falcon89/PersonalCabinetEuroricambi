@@ -18,41 +18,42 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
 </head>
-<jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
 <body>
-<div class="wrapper">
-    <jsp:include page="headerLeftMenu.jsp"/>
+<div class="card">
+    <div class="header">
+        <h4 class="title">Менеджер з продаж</h4>
+    </div>
 
-    <div class="main-panel">
-        <jsp:include page="headerUpMenu.jsp"/>
-        <div class="content">
-            <div class="container-fluid">
+
+    <div class="content">
+        <ul class="list-unstyled team-members">
+            <li>
                 <div class="row">
-                    <div class=" col-sm-12 col-md-12 col-lg-10">
-                        <article class="single-post">
-                            <div class="post-header">
-                                <h2><a href="#">${news.title}</a></h2>
-                            </div>
-                            <br>
-                            <div class="post-content ">
-                                <a href="#"><img src="${news.fotonews}" alt="" class="img-responsive"></a>
-                                <p class="text-centr">${news.text}</p>
-                            </div>
-                        </article>
+                    <div class="col-xs-2">
+                        <div class="avatar">
+                            <img src="assets/img/faces/face-0.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <h6>Анатолій</h6>
 
+                        <span class="text-success">Euroricambi</span>
                     </div>
 
+
+                    <div class="col-xs-6 text-right">
+                        Надіслати запит
+
+                        <a href="#" class="btn btn-sm btn-success btn-icon" data-toggle="modal" data-target="#basicModal"><i class="fa fa-envelope"></i></a>
+
+                    </div>
                 </div>
-            </div>
-        </div>
-        <jsp:include page="footer.jsp"/>
+            </li>
+
+        </ul>
     </div>
+
 </div>
-
 </body>
-
-<jsp:include page="include_js.jsp"/>
-
-
 </html>

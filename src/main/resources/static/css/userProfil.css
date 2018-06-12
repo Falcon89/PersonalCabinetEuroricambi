@@ -137,6 +137,7 @@ figure.snip1237 .date {
 figure.snip1237 .date span {
   display: block;
   line-height: 24px;
+  margin-left: -15px;
 }
 figure.snip1237 .date .month {
   font-size: 14px;

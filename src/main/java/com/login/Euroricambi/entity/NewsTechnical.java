@@ -32,12 +32,12 @@ public class NewsTechnical implements Serializable {
         this.newURL = newURL;
     }
 
-    public NewsTechnical(long id, String title, String date, String text, String fotonews) {
+    public NewsTechnical(long id, String title, String date, String text) {
         this.id = id;
         this.title = title;
+        this.dateTime = dateTime;
         this.date = date;
         this.text = text;
-        this.fotonews = fotonews;
     }
 
     public long getId() {
@@ -94,5 +94,18 @@ public class NewsTechnical implements Serializable {
 
     public void setNewURL(String newURL) {
         this.newURL = newURL;
+    }
+
+    @Override
+    public String toString() {
+        return "NewsTechnical{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", dateTime=" + dateTime +
+                ", date='" + date + '\'' +
+                ", text='" + text + '\'' +
+                ", fotonews='" + fotonews + '\'' +
+                ", newURL='" + newURL + '\'' +
+                '}';
     }
 }

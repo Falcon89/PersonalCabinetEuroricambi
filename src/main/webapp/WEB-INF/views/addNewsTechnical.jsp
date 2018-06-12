@@ -52,18 +52,20 @@
                             </tr>
                             </thead>
                             <tbody>
+
+                            <c:forEach var="newsTechnical" items="${newsesTe}">
                             <tr>
-                                <td style="text-align:center;" class="">1</td>
-                                <td class="">user123</td>
-                                <td style="text-align:center;" class="">123@hotmail.com</td>
+                                <td style="text-align:center;" class="">${newsTechnical.title}</td>
+                                <td class="">${newsTechnical.date}</td>
+                                <td style="text-align:center;" class="">${newsTechnical.text}</td>
 
                                 <td style="text-align:center;">
-                                    <!--                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" contenteditable="false">Edit</button>-->
-                                    <a href="${pageContext.request.contextPath}/updateNewsTechnical"> <button class="btn btn-success" contenteditable="false">Edit</button></a>
-                                    <button class="btn btn-danger" contenteditable="false">Delete</button>
+
+                                    <a href="/updateNewsTechnical/${newsTechnical.id}"><button class="btn btn-success" contenteditable="false">Edit</button></a>
+                                    <a href="/deleteNewsTechnical/${newsTechnical.id}"><button class="btn btn-danger" contenteditable="false">Delete</button></a>
                                 </td>
                             </tr>
-
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>
@@ -91,13 +93,13 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Дата новини</label>
+                                                <label>Дата новини</label>
                                                 <input type="text" name="date" class="form-control border-input" placeholder="01.06.2018">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Додати фото</label>
+                                                <label>Додати фото</label>
                                                 <input class="form-control border-input" type="file"  name="file">
 
                                             </div>

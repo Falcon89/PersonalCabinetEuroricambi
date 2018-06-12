@@ -4,9 +4,10 @@ import com.login.Euroricambi.dao.NewsTechnicalDao;
 import com.login.Euroricambi.entity.NewsTechnical;
 import com.login.Euroricambi.service.NewsTechnicalService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class NewsTechnicalServiceImpl implements NewsTechnicalService {
 @Autowired
 private NewsTechnicalDao newsTechnicalDao;
@@ -29,7 +30,7 @@ private NewsTechnicalDao newsTechnicalDao;
 
     @Override
     public void delete(long id) {
- newsTechnicalDao.findOne(id);
+ newsTechnicalDao.delete(id);
     }
 
 
@@ -44,7 +45,7 @@ NewsTechnical newsTechnicalFromBD = newsTechnicalDao.findOne(newsTechnical.getId
         newsTechnicalFromBD.setTitle(newsTechnical.getTitle());
         newsTechnicalFromBD.setDate(newsTechnical.getDate());
         newsTechnicalFromBD.setText(newsTechnical.getText());
-        newsTechnicalFromBD.setFotonews(newsTechnical.getFotonews());
+//        newsTechnicalFromBD.setFotonews(newsTechnical.getFotonews());
 
         newsTechnicalDao.save(newsTechnicalFromBD);
     }

@@ -6,14 +6,11 @@ import com.login.Euroricambi.dao.NewsDao;
 import com.login.Euroricambi.dao.NewsTechnicalDao;
 import com.login.Euroricambi.entity.News;
 import com.login.Euroricambi.entity.NewsTechnical;
-import com.login.Euroricambi.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -28,6 +25,8 @@ public class NewsAdminController {
 
     @Autowired
     NewsTechnicalDao newsTechnicalDao;
+
+
 
 
     @Autowired
@@ -55,16 +54,16 @@ public class NewsAdminController {
             String newURL = cloudc.createColorImageSize(filename,"red",300, 80, "crop");
             System.out.println("newurl = "  + newURL);
 
-            news.setFotonews(newURL);
-            news.setDateTime(LocalDateTime.now());
+//            news.setFotonews(newURL);
+//            news.setDateTime(LocalDateTime.now());
             newsDao.save(news);
         }
         catch (IOException e)
         {
             e.printStackTrace();
-            return "redirect:/index";
+            return "redirect:/newsEditing";
         }
-        return "redirect:/index";
+        return "redirect:/newsEditing";
     }
 /**/
 
@@ -72,7 +71,7 @@ public class NewsAdminController {
 public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @RequestParam("file")MultipartFile file){
 
     if (file.isEmpty()){
-        return "redirect:/index";
+        return "redirect:/newsEditing";
     }
     try
     {   //image is saved into MAP uploadresult
@@ -85,7 +84,7 @@ public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @Re
         String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
         System.out.println("filename = "  + filename);
 
-        String newURL = cloudc.createColorImageSize(filename,"red",300, 80, "crop");
+        String newURL = cloudc.createColorImageSize(filename,"red",600, 200, "crop");
         System.out.println("newurl = "  + newURL);
 
         newsTechnicalDao.save(newsTechnical);
@@ -93,8 +92,8 @@ public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @Re
     catch (IOException e)
     {
         e.printStackTrace();
-        return "redirect:/index";
+        return "redirect:/newsEditing";
     }
-    return "redirect:/index";
+    return "redirect:/newsEditing";
 }
 }

@@ -1,7 +1,6 @@
 package com.login.Euroricambi.service;
 
 
-import com.login.Euroricambi.entity.News;
 import com.login.Euroricambi.entity.NewsTechnical;
 
 import java.util.List;

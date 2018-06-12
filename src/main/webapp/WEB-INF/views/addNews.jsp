@@ -1,9 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
-<%@page session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,14 +54,13 @@
                             <tbody>
 <c:forEach var="news" items="${newses}">
                             <tr>
-                                <td style="text-align:center;" class="">${news.id}</td>
                                 <td class="">${news.title}</td>
                                 <td style="text-align:center;" class="">${news.date}</td>
-
+                                <td style="text-align:center;" class="">${news.text}</td>
                                 <td style="text-align:center;">
                                     <!--                <button class="btn btn-success" data-toggle="modal" data-target="#myModal" contenteditable="false">Edit</button>-->
-                                    <a href="${pageContext.request.contextPath}/updateNews"><button class="btn btn-success" contenteditable="false">Edit</button></a>
-                                    <button class="btn btn-danger" contenteditable="false">Delete</button>
+                                   <a href="/updateNews/${news.id}"><button class="btn btn-success" contenteditable="false">Edit</button></a>
+                                   <a href="/deleteNews/${news.id}"> <button class="btn btn-danger" contenteditable="false">Delete</button></a>
                                 </td>
                             </tr>
 </c:forEach>
@@ -76,7 +74,7 @@
                             </div>
                             <div class="content">
                                 <form action="./saveNews?${_csrf.parameterName}=${_csrf.token}" method="post" accept-charset="UTF-8"
-                                      enctype="multipart/form-data" class="form-horizontal form-label-left">
+                                     class="form-horizontal form-label-left"    enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -86,14 +84,16 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Дата новини</label>
+                                                <label>Дата новини</label>
                                                 <input type="text" name="date" class="form-control border-input" placeholder="01.06.2018">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Додати фото</label>
-                                                <input class="form-control border-input" type="file" name="file">
+                                                <label class="custom-file-label text-danger" for="customFile">
+                                                    файли PNG та JPEG з розширенням 290х35!</label>
+                                                <input class="form-control border-input" type="file" name="file" id="fileChooser"
+                                                       onchange="return ValidateFileUpload()" required>
 
                                             </div>
                                         </div>
@@ -103,7 +103,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини" ></textarea>
+                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -126,7 +126,44 @@
     </div>
 </div>
 
+<SCRIPT type="text/javascript">
+    function ValidateFileUpload() {
+        var fuData = document.getElementById('fileChooser');
+        var FileUploadPath = fuData.value;
 
+//To check if user upload any file
+        if (FileUploadPath == '') {
+            alert("Завантажте зображення");
+
+        } else {
+            var Extension = FileUploadPath.substring(
+                FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+//The file uploaded is an image
+
+            if (Extension == "png" || Extension == "jpeg" || Extension == "jpg") {
+
+// To Display
+                if (fuData.files && fuData.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#blah').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(fuData.files[0]);
+                }
+
+            }
+
+//The file upload is NOT an image
+            else {
+                alert("Фото підтримує лише типи файлів PNG, JPG та JPEG з розширенням 290х280.");
+
+            }
+        }
+    }
+</SCRIPT>
 </body>
 
 <jsp:include page="include_js.jsp"/>

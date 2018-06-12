@@ -4,9 +4,10 @@ import com.login.Euroricambi.dao.NewsDao;
 import com.login.Euroricambi.entity.News;
 import com.login.Euroricambi.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class NewsServiceImpl implements NewsService {
     @Autowired
     private NewsDao newsDao;
@@ -46,7 +47,7 @@ newsDao.delete(id);
         newsFromDB.setTitle(news.getTitle());
         newsFromDB.setDate(news.getDate());
         newsFromDB.setText(news.getText());
-        newsFromDB.setFotonews(news.getFotonews());
+//        newsFromDB.setFotonews(news.getFotonews());
 
         newsDao.save(newsFromDB);
 

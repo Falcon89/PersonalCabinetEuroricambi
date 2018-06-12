@@ -18,41 +18,30 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
 </head>
-<jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
 <body>
-<div class="wrapper">
-    <jsp:include page="headerLeftMenu.jsp"/>
-
-    <div class="main-panel">
-        <jsp:include page="headerUpMenu.jsp"/>
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class=" col-sm-12 col-md-12 col-lg-10">
-                        <article class="single-post">
-                            <div class="post-header">
-                                <h2><a href="#">${news.title}</a></h2>
-                            </div>
-                            <br>
-                            <div class="post-content ">
-                                <a href="#"><img src="${news.fotonews}" alt="" class="img-responsive"></a>
-                                <p class="text-centr">${news.text}</p>
-                            </div>
-                        </article>
-
-                    </div>
-
+<div class="card">
+    <div class="content">
+        <div class="row">
+            <div class="col-xs-5">
+                <div class="icon-big icon-warning text-center">
+                    <img src="images/1_euro.svg" width="80%">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <div class="numbers">
+                    <p>Мої бали по euroricambi</p>
+                    <strong class="point_collro"> 1 050</strong>
                 </div>
             </div>
         </div>
-        <jsp:include page="footer.jsp"/>
+        <div class="footer">
+            <hr />
+            <div class="stats">
+                <a href="index.html"> <i class="ti-reload"></i></a><b> Оновити</b>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
-
-<jsp:include page="include_js.jsp"/>
-
-
 </html>

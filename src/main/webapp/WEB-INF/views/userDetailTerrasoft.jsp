@@ -18,41 +18,44 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
 </head>
-<jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
 <body>
-<div class="wrapper">
-    <jsp:include page="headerLeftMenu.jsp"/>
-
-    <div class="main-panel">
-        <jsp:include page="headerUpMenu.jsp"/>
-        <div class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class=" col-sm-12 col-md-12 col-lg-10">
-                        <article class="single-post">
-                            <div class="post-header">
-                                <h2><a href="#">${news.title}</a></h2>
-                            </div>
-                            <br>
-                            <div class="post-content ">
-                                <a href="#"><img src="${news.fotonews}" alt="" class="img-responsive"></a>
-                                <p class="text-centr">${news.text}</p>
-                            </div>
-                        </article>
-
-                    </div>
-
-                </div>
+<div class="card card-user">
+    <div class="image imgUp">
+        <img src="images/log_us.jpg" alt="..."/>
+    </div>
+    <div class="content">
+        <div class="author">
+            <img class="avatar border-white" src="images/user_log.png" alt="..."/>
+            <h4 class="title">Иванов Иван Иванович<br/>
+            </h4>
+        </div>
+    </div>
+    <hr>
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-1">
+                <h5>
+                    <strong class="point_collro">133 666<br/>
+                    </strong>Сальдо</h5>
+            </div>
+            <div class="col-md-4">
+                <h5><strong class="point_collro">250 000<br/>
+                </strong>Ліміт</h5>
+            </div>
+            <div class="col-md-3">
+                <h5><strong class="point_collro">21<br/>
+                </strong>Термін</h5>
             </div>
         </div>
-        <jsp:include page="footer.jsp"/>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Безготовковий перерахунок<br/></h5>
+                Спосіб оплати
+            </div>
+
+        </div>
     </div>
 </div>
-
 </body>
-
-<jsp:include page="include_js.jsp"/>
-
-
 </html>

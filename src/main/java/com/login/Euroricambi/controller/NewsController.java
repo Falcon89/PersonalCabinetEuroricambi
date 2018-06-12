@@ -2,22 +2,19 @@ package com.login.Euroricambi.controller;
 
 
 import com.login.Euroricambi.Utils.CloudinaryConfig;
-//import com.login.Euroricambi.dao.NewsDao;
+import com.login.Euroricambi.Utils.NewsUtil;
 import com.login.Euroricambi.dao.NewsDao;
 import com.login.Euroricambi.entity.News;
-import com.login.Euroricambi.service.MailService;
-//import com.login.Euroricambi.service.NewsService;
+import com.login.Euroricambi.entity.NewsTechnical;
 import com.login.Euroricambi.service.NewsService;
 import com.login.Euroricambi.service.NewsTechnicalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class NewsController {
-    @Autowired
-    private NewsService newsService;
 
     @Autowired
     CloudinaryConfig cloudc;
@@ -25,6 +22,11 @@ public class NewsController {
     @Autowired
     NewsDao newsDao;
 
+    @Autowired
+    NewsTechnicalService newsTechnicalService;
+
+    @Autowired
+    NewsService newsService;
 
 
     @GetMapping("/addNews")
@@ -35,7 +37,9 @@ public class NewsController {
     }
 
     @GetMapping("/addNewsTechnical")
-    public String addNewsTechnical() {
+    public String addNewsTechnical(Model model) {
+        model.addAttribute("newsesTe", newsTechnicalService.findAll());
+        model.addAttribute("newsTechnical", new NewsTechnical());
         return "addNewsTechnical";
     }
 
@@ -46,33 +50,72 @@ public class NewsController {
 
     @GetMapping("/news")
     public String news(Model model) {
-//        model.addAttribute("newses", newsService.findAll() );
-//        model.addAttribute("news", new News());
+//        model.addAttribute("newses", newsService.findAll());
+        model.addAttribute("newses",NewsUtil.showShortNewsTextForListNews(newsService.findAll()));
+        model.addAttribute("news", new News());
         return "news";
     }
 
-    @GetMapping("/newsFull")
-    public String newsFull() {
+    @GetMapping("/newsFull/{id}")
+    public String newsFull(@PathVariable long id, Model model) {
+        model.addAttribute("news", newsService.findOne(id));
         return "newsFull";
     }
 
     @GetMapping("/newsTechnicallInformation")
-    public String newsTechnicallInformation() {
+    public String newsTechnicallInformation(Model model) {
+        model.addAttribute("newsesTh", newsTechnicalService.findAll());
+        model.addAttribute("newsTechnical", new NewsTechnical());
         return "newsTechnicallInformation";
     }
 
-    @GetMapping("/newsTechnicallInformationFull")
-    public String newsTechnicallInformationFull() {
+    @GetMapping("/newsTechnicallInformationFull/{id}")
+    public String newsTechnicallInformationFull(@PathVariable long id, Model model) {
+        model.addAttribute("newsTechnical", newsTechnicalService.findOne(id));
         return "newsTechnicallInformationFull";
     }
 
-    @GetMapping("/updateNews")
-    public String updateNews(){
+    @GetMapping("/updateNews/{id}")
+    public String updateNews(Model model, @PathVariable(value = "id") Long id) {
+        model.addAttribute("news", newsService.findOne(id));
         return "updateNews";
     }
-    @GetMapping("/updateNewsTechnical")
-    public String updateNewsTechnical(){
+
+    @PostMapping("/updateNewsPage/{id}")
+    public String updateNewsPage(@PathVariable long id,
+                                 @RequestParam String title,
+                                 @RequestParam String date,
+                                 @RequestParam String text) {
+        newsService.update(new News(id, title, date, text));
+        return "redirect:/newsEditing";
+    }
+
+    @GetMapping("/deleteNews/{id}")
+    public String deleteNews(@PathVariable long id) {
+        newsService.delete(id);
+        return "redirect:/addNews";
+    }
+
+
+    @GetMapping("/updateNewsTechnical/{id}")
+    public String updateNewsTechnical(Model model, @PathVariable(value = "id") Long id) {
+        model.addAttribute("newsTehnical", newsTechnicalService.findOne(id));
         return "updateNewsTechnical";
+    }
+
+    @PostMapping("updateNewsTechnicalPage/{id}")
+    public String updateNewsTechnicalPage(@PathVariable long id,
+                                          @RequestParam String title,
+                                          @RequestParam String date,
+                                          @RequestParam String text) {
+        newsTechnicalService.update(new NewsTechnical(id, title, date, text));
+        return "redirect:/newsEditing";
+    }
+
+    @GetMapping("/deleteNewsTechnical/{id}")
+    public String deleteNewsTechnical(@PathVariable long id) {
+        newsTechnicalService.delete(id);
+        return "redirect:/addNewsTechnical";
     }
 
 

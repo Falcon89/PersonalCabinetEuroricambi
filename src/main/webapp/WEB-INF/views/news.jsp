@@ -32,90 +32,25 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="${pageContext.request.contextPath}/newsFull" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
+                    <c:forEach var="news" items="${newses}">
+                        <div class="col-lg-4 col-sm-4">
+                            <figure class="snip1237">
+                                <div class="image">
+                                    <img src="${news.fotonews}" alt="sample74"/><i class="ion-ios-clock-outline"></i>
+                                    <div class="date"><span class="day">${news.date}</span><span class="month"></span>
+                                    </div>
+                                </div>
+                                <figcaption>
+                                    <h3>${news.title}</h3>
+                                    <p>${news.text}</p>
+                                    <a href="/newsFull/${news.id}" class="read-more">Читати
+                                        більше</a>
+                                </figcaption>
+                            </figure>
 
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="#" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
+                        </div>
+                    </c:forEach>
 
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="#" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="#" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="#" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
-
-                    </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <figure class="snip1237">
-                            <div class="image">
-                                <img src="/images/Euroricambi_news.jpg" alt="sample74"/><i class="ion-ios-clock-outline"></i>
-                                <div class="date"><span class="day">30</span><span class="month">Травня</span></div>
-                            </div>
-                            <figcaption>
-                                <h3>Вся продукция Euroricambi</h3>
-                                <p>Вже багато років ця швидко зростаюча італійська компанія виробляє запасні частини для коробок перемикання передач (КПП), роздавальних коробок, диференціалів передніх і задніх мостів..</p>
-                                <a href="#" class="read-more">Читати більше</a>
-                            </figcaption>
-                        </figure>
-
-                    </div>
 
                 </div>
             </div>
