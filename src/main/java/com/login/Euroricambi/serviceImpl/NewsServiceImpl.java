@@ -32,14 +32,11 @@ newsDao.save(news);
 newsDao.delete(id);
     }
 
-//    @Override
-//    public List<News> findFourLastNews() {
-//        return newsDao.findFourLastNews();
-//    }
-//@Override
-//public List<News> findFourLastNews() {
-//    return null;
-//}
+    @Override
+    public List<News> findFourLastNews() {
+        return newsDao.findFourLastNews();
+    }
+
 
     @Override
     public void update(News news) {

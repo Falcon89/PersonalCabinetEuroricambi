@@ -42,21 +42,6 @@ public class MailManagerController {
     private String sendEmail(Map<String, String> modelMap) throws Exception {
         mailService.sendEmail("send msg", generateMailContent(modelMap), "euroricambi.ua@gmail.com");
         return "redirect:/";
-
-
-//        Old code
-//        JavaMailSenderImpl sender = null;
-//        MimeMessage message = sender.createMimeMessage();
-//        MimeMessageHelper helper = new MimeMessageHelper(message);
-//
-//        ModelMap modelMap = new ModelMap();
-////        modelMap.get(modelMap);
-//        helper.setTo("euroricambi.ua@gmail.com");
-//        helper.setSubject("euroricambi");
-//        helper.setText("Message" + modelMap);
-//        helper.setSubject("Euroricambi Contact Form");
-//
-//        sender.send(message);
     }
 
     private String wrapAttributeIntoHtml(String attribute) {
@@ -75,10 +60,6 @@ public class MailManagerController {
         }
         return builder.toString();
     }
-
-
-
-
     @RequestMapping("/mailThank")
     public String mailThank(){return "mailThank";}
 

@@ -14,44 +14,31 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Admin panel Euroricamby</title>
+    <title>Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
+    <link href="favicon.ico" rel="shortcut icon">
 </head>
 <jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
-
 <body>
-
 <div class="wrapper">
     <jsp:include page="headerLeftMenu.jsp"/>
-
     <div class="main-panel">
         <jsp:include page="headerUpMenu.jsp"/>
         <div class="content">
             <div class="container-fluid">
-
                 <div class="row">
                     <div class="col-lg-12 col-sm-12">
-
-
                         <iframe  target="_parent" frameborder="0" allowfullscreen="" src="http://www.euroricambi.com/catalplus/12/index.html" width="102%" height="1000px" style="margin-top: -140px">
                         </iframe>
-
                     </div>
                 </div>
             </div>
         </div>
-
         <jsp:include page="footer.jsp"/>
-
     </div>
 </div>
-
-
 </body>
-
 <jsp:include page="include_js.jsp"/>
-
-
 </html>

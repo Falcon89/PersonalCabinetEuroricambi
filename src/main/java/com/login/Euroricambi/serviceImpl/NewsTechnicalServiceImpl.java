@@ -33,11 +33,11 @@ private NewsTechnicalDao newsTechnicalDao;
  newsTechnicalDao.delete(id);
     }
 
+    @Override
+    public List<NewsTechnical> findFourLastNewsTechnical() {
+        return newsTechnicalDao.findFourLastNewsTechnical();
+    }
 
-//    @Override
-//    public List<NewsTechnical> findFourLastNews() {
-//        return null;
-//    }
 
     @Override
     public void update(NewsTechnical newsTechnical) {

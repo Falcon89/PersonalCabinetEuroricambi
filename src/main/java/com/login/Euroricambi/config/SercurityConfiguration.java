@@ -50,7 +50,7 @@ public class SercurityConfiguration extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/")
+                .logoutSuccessUrl("/login")
                 .deleteCookies("JSESSIONID", "Secret_cookei")
                 .and()
                 .authorizeRequests()

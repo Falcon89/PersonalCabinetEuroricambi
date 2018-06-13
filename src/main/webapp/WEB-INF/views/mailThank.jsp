@@ -29,7 +29,7 @@
         </div>
         <div class="footer-like">
             <p>Не отримали відповідь?
-                <a href="${pageContext.request.contextPath}/">Спробуйте зателефонувати.</a>
+                <a href="#">Спробуйте зателефонувати.</a>
             </p>
         </div>
     </div>

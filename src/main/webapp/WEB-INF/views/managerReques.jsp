@@ -29,7 +29,7 @@
                         <h4 class="title">Надіслати повідомлення(Запит)</h4>
                     </div>
                     <div class="content">
-                        <form:form action="SendMaseegeManager" method="post">
+                        <form:form action="SendMaseegeManager" method="post" accept-charset="UTF-8">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">

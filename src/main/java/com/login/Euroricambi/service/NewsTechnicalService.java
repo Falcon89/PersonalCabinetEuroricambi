@@ -14,7 +14,7 @@ public interface NewsTechnicalService {
 
     void delete(long id);
 
-//    List<NewsTechnical> findFourLastNews();
+    List<NewsTechnical> findFourLastNewsTechnical();
 
     void update(NewsTechnical newsTechnical);
 }

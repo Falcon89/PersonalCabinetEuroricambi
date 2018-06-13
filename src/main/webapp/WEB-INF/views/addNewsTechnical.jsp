@@ -14,9 +14,10 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Admin panel Euroricamby</title>
+    <title>Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
+    <link href="favicon.ico" rel="shortcut icon">
 </head>
 <jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
@@ -31,15 +32,10 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
-
-
                     <div class="col-lg-12 col-sm-12">
-
                         <div class="header">
                             <h4 class="title"> Список новини</h4>
                         </div>
-
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
@@ -47,33 +43,30 @@
                                 <th class="" style="width: 10%">Дата новини</th>
                                 <th class="" style="width: 46%">Текст новини</th>
                                 <th class="">Редагувати/Видалити</th>
-
-
                             </tr>
                             </thead>
                             <tbody>
 
                             <c:forEach var="newsTechnical" items="${newsesTe}">
-                            <tr>
-                                <td style="text-align:center;" class="">${newsTechnical.title}</td>
-                                <td class="">${newsTechnical.date}</td>
-                                <td style="text-align:center;" class="">${newsTechnical.text}</td>
+                                <tr>
+                                    <td style="text-align:center;" class="">${newsTechnical.title}</td>
+                                    <td class="">${newsTechnical.date}</td>
+                                    <td style="text-align:center;" class="">${newsTechnical.text}</td>
 
-                                <td style="text-align:center;">
+                                    <td style="text-align:center;">
 
-                                    <a href="/updateNewsTechnical/${newsTechnical.id}"><button class="btn btn-success" contenteditable="false">Edit</button></a>
-                                    <a href="/deleteNewsTechnical/${newsTechnical.id}"><button class="btn btn-danger" contenteditable="false">Delete</button></a>
-                                </td>
-                            </tr>
+                                        <a href="/updateNewsTechnical/${newsTechnical.id}">
+                                            <button class="btn btn-success" contenteditable="false">Edit</button>
+                                        </a>
+                                        <a href="/deleteNewsTechnical/${newsTechnical.id}">
+                                            <button class="btn btn-danger" contenteditable="false">Delete</button>
+                                        </a>
+                                    </td>
+                                </tr>
                             </c:forEach>
                             </tbody>
                         </table>
                     </div>
-
-
-
-
-
 
 
                     <div class="col-lg-12 col-md-12">
@@ -82,25 +75,28 @@
                                 <h4 class="title">Додавання новини</h4>
                             </div>
                             <div class="content">
-                                <form action="./saveNewsTechnical?${_csrf.parameterName}=${_csrf.token}" method="post" accept-charset="UTF-8"
+                                <form action="./saveNewsTechnical?${_csrf.parameterName}=${_csrf.token}" method="post"
+                                      accept-charset="UTF-8"
                                       enctype="multipart/form-data" class="form-horizontal form-label-left">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
-                                                <input type="text" name="title" class="form-control border-input" placeholder="Назва новини" >
+                                                <input type="text" name="title" class="form-control border-input"
+                                                       placeholder="Назва новини">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Дата новини</label>
-                                                <input type="text" name="date" class="form-control border-input" placeholder="01.06.2018">
+                                                <input type="text" name="date" class="form-control border-input"
+                                                       placeholder="01.06.2018">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Додати фото</label>
-                                                <input class="form-control border-input" type="file"  name="file">
+                                                <input class="form-control border-input" type="file" name="file">
 
                                             </div>
                                         </div>
@@ -110,7 +106,8 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини" ></textarea>
+                                                <textarea rows="10" name="text" class="form-control border-input"
+                                                          placeholder="Текст новини"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -123,21 +120,12 @@
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-
         <jsp:include page="footer.jsp"/>
-
     </div>
 </div>
-
-
 </body>
-
 <jsp:include page="include_js.jsp"/>
-
-
 </html>

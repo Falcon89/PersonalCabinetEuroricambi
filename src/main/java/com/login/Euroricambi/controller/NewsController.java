@@ -64,7 +64,7 @@ public class NewsController {
 
     @GetMapping("/newsTechnicallInformation")
     public String newsTechnicallInformation(Model model) {
-        model.addAttribute("newsesTh", newsTechnicalService.findAll());
+        model.addAttribute("newsesTh",NewsUtil.showShortNewsTechnicalForListNewsTechnical(newsTechnicalService.findAll()));
         model.addAttribute("newsTechnical", new NewsTechnical());
         return "newsTechnicallInformation";
     }

@@ -1478,8 +1478,8 @@ textarea.form-control {
   .card .image {
     width: 100%;
     overflow: hidden;
-    height: 260px;
-    border-radius: 6px 6px 0 0;
+    /*height: 260px;*/
+    /*border-radius: 6px 6px 0 0;*/
     position: relative;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;

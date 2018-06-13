@@ -12,9 +12,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Admin panel Euroricamby</title>
+    <title>Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
+
 </head>
 <jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
