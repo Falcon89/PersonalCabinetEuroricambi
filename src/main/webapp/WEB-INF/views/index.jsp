@@ -34,10 +34,6 @@
                         <jsp:include page="ePointsTerrasoft.jsp"/>
                         <jsp:include page="managerRequestOne.jsp"/>
                     </div>
-                    <%--<h2>${username}</h2>--%>
-                    <%--<h2>${password}</h2>--%>
-                    <%--<h2>${other}</h2>--%>
-                    <%--<h2>${log}</h2>--%>
                     <div class="col-lg-8 col-sm-12">
                         <div class="card">
                             <div class="content">

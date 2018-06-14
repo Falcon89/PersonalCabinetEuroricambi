@@ -1,5 +1,6 @@
 package com.login.Euroricambi.controller;
 
+//import com.example.demo.wsdl.*;
 import com.login.Euroricambi.wsdl.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

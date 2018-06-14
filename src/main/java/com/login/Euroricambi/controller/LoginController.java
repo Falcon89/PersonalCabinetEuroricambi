@@ -29,26 +29,13 @@ public class LoginController {
     }
 
 /*add 14.06.2018*/
-    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
-    public String index(Model model) {
-        return "index";
-    }
 
-    @PostMapping("/index")
-    public String saveDetails(
-            @RequestParam("username") String name,
-            @RequestParam("password") String pass,
-            ModelMap modelMap) {
-        LoginCheckResponse response = terrasoft.loginCheck(name, pass);
-        ContactInfo info = response.getCInfo().getValue();
-        modelMap.addAttribute("username", info.getFirstName().getValue());
-        modelMap.addAttribute("password", info.getLastName().getValue());
-        modelMap.addAttribute("other", info.getClientStoreCityName().getValue());
-        modelMap.addAttribute("log",info.getLogin().getValue());
-
-
-        return "index";
-    }
+//    @PostMapping("/index")
+//    public String saveDetails(
+//
+//
+//        return "index";
+//    }
 
 //    @GetMapping("/product/{index}")
 //    public String product(
