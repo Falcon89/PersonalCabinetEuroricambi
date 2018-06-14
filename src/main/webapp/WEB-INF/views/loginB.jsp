@@ -25,7 +25,7 @@
             <div class="col-md-12 col-lg-12 col-xs-12">
                 <div class="wrapper">
 
-                    <form class="login" action="/login" method="post">
+                    <form class="login" action="index" method="post">
                         <br> <br>
                         <p class="log_in"><img src="img/Euroricambi_logo3.svg"></p>
                         <br> <br>
