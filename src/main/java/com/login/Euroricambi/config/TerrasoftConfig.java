@@ -1,31 +1,25 @@
 package com.login.Euroricambi.config;
 
-import com.login.Euroricambi.controller.Terrasoft;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
-import org.springframework.ws.client.support.interceptor.ClientInterceptor;
-import org.springframework.ws.client.support.interceptor.PayloadValidatingInterceptor;
+import com.login.Euroricambi.service.TerrasoftService;
 
-import java.util.Arrays;
 
 @Configuration
-public class Config {
-
+public class TerrasoftConfig {
     @Bean
     public Jaxb2Marshaller marshaller() {
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setContextPath("com.login.Euroricambi.wsdl");
         return marshaller;
     }
-
     @Bean
-    public Terrasoft quoteClient(Jaxb2Marshaller marshaller) {
-        Terrasoft client = new Terrasoft();
+    public TerrasoftService quoteClient(Jaxb2Marshaller marshaller) {
+        TerrasoftService client = new TerrasoftService();
         client.setDefaultUri("http://82.207.107.237:35053/TerrasoftDataService/TerrasoftData.svc");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);
         return client;
     }
-
 }
