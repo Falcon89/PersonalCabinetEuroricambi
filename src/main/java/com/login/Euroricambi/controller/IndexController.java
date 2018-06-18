@@ -8,8 +8,12 @@ import com.login.Euroricambi.security.model.TerrasoftAuthentication;
 import com.login.Euroricambi.service.NewsService;
 import com.login.Euroricambi.service.NewsTechnicalService;
 import com.login.Euroricambi.service.TerrasoftService;
+import com.login.Euroricambi.wsdl.AccountInfoForProjectEuroricambi;
+import com.login.Euroricambi.wsdl.GetAccountInfoForProjectEuroricambiResponse;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -31,15 +35,21 @@ public class IndexController {
 
 private TerrasoftAuthentication terrasoftAuthentication;
 
-    private EuroricambiUser euroricambiUser;
 
     //    @RequestMapping("/index")
 //    public String index() {
 //        return "index";
 //    }
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
-    public String index(Model model, HttpServletRequest request) {
-System.out.println(request);
+    public String index(Model model,@AuthenticationPrincipal TerrasoftAuthentication authentication) {
+        EuroricambiUser user = (EuroricambiUser)  authentication.getPrincipal();
+        GetAccountInfoForProjectEuroricambiResponse response = terrasoftService.getAccountInfoForProjectEuroricambi(user.getContactId());
+        AccountInfoForProjectEuroricambi info = response.getGetAccountInfoForProjectEuroricambiResult().getValue();
+
+//        model.addAttribute("phone", info.getPhone().getValue());
+        model.addAttribute("info",info);
+
+
 //        System.out.println(terrasoftService.getAccountInfoForProjectEuroricambi(euroricambiUser.getContactId()).getGetAccountInfoForProjectEuroricambiResult().getValue());
 //model2.addObject("log", terrasoftService.getAccountInfoForProjectEuroricambi(model2.getViewName()));
 //        LoginCheckResponse response = terrasoft.loginCheck("","");
@@ -59,7 +69,7 @@ System.out.println(request);
         if (!newsesTh.isEmpty()) {
             model.addAttribute("newsesTh", NewsUtil.showShortNewsTechnicalForListNewsTechnicalIndex(newsTechnicalService.findFourLastNewsTechnical()));
         }
-        return "model2";
+        return "index";
     }
 
 //    @PostMapping("/")

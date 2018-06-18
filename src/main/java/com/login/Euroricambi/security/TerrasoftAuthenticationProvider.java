@@ -1,5 +1,7 @@
 package com.login.Euroricambi.security;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationServiceException;
@@ -19,6 +21,11 @@ import java.util.Collections;
 
 @Component
 public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(TerrasoftAuthenticationProvider.class);
+
+
+
 
     private final String ADMIN_LOGIN;
     private final String ADMIN_PASSWORD;
@@ -49,8 +56,13 @@ public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
         LoginCheckResponse response = terrasoft.loginCheck(login, password);
         Boolean loginCheck = response.isLoginCheckResult();
 
+        LOGGER.debug("LoginCheck {}",loginCheck);
+
         if (loginCheck == null || !loginCheck) {
             String errorMessage = response.getErrorMessage().getValue();
+
+            LOGGER.debug("ERROR {}", errorMessage);
+
             throw new AuthenticationServiceException(errorMessage);
         } else {
             ContactInfo contactInfo = response.getCInfo().getValue();

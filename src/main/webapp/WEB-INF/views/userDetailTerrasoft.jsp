@@ -28,7 +28,7 @@
     <div class="content">
         <div class="author">
             <img class="avatar border-white" src="images/user_log.png" alt="..."/>
-            <h4 class="title">${log}<br/>
+            <h4 class="title">${info.getPhone().getValue()}<br/>
             </h4>
         </div>
     </div>

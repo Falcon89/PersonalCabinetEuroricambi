@@ -4,20 +4,6 @@ import com.login.Euroricambi.wsdl.ContactInfo;
 
 public class EuroricambiUser {
 
-//    <cInfo xmlns:a="http://schemas.datacontract.org/2004/07/TerrasoftData" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-//        <a:AccountId i:nil="true"/>
-//        <a:ClientCabinetToken>RTST+pxHq1hRwdu0zmAxhH95/k5lDFv/Twg1atQgavwQ0l+iAC+e7g==</a:ClientCabinetToken>
-//        <a:ClientStoreCityId>ae8a8d87-2fc8-4cc3-ba8f-ec59f94f039c</a:ClientStoreCityId>
-//        <a:ClientStoreCityName>Відділ маркетингу</a:ClientStoreCityName>
-//        <a:ContactId>33aa7d78-29a3-4f11-8022-8620999b53f7</a:ContactId>
-//        <a:Email i:nil="true"/>
-//        <a:FirstName>Соломія</a:FirstName>
-//        <a:IsCompanyManager>true</a:IsCompanyManager>
-//        <a:LastName>Сиділо</a:LastName>
-//        <a:Login>Сиділо Соломія</a:Login>
-//        <a:MobilePhone i:nil="true"/>
-//        <a:SurName i:nil="true"/>
-//    </cInfo>
 
     private String accountId;
     private String clientCabinetToken;
