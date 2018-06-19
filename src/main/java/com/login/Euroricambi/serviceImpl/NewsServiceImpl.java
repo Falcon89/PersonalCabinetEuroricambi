@@ -44,7 +44,7 @@ newsDao.delete(id);
         newsFromDB.setTitle(news.getTitle());
         newsFromDB.setDate(news.getDate());
         newsFromDB.setText(news.getText());
-//        newsFromDB.setFotonews(news.getFotonews());
+        newsFromDB.setFotonews(news.getFotonews());
 
         newsDao.save(newsFromDB);
 

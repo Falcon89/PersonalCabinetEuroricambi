@@ -15,6 +15,7 @@ import java.util.List;
 //@EntityScan("com.login.Euroricambi.service.dao")
 public interface NewsTechnicalDao extends JpaRepository<NewsTechnical, Long>{
 NewsTechnical findOne(Long id);
-    @Query(value = "select * from news order by date_time desc limit 1", nativeQuery = true)
+    @Query(value = "select * from news_" +
+            "technical order by date_time desc limit 1", nativeQuery = true)
     List<NewsTechnical> findFourLastNewsTechnical();
 }

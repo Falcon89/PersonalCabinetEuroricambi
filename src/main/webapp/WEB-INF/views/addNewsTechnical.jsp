@@ -96,7 +96,7 @@
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Додати фото</label>
-                                                <input class="form-control border-input" type="file" name="file">
+                                                <input class="form-control border-input" type="file" name="file"required>
 
                                             </div>
                                         </div>

@@ -88,10 +88,6 @@
                                                     <div class="image">
                                                         <img src="${news.fotonews}" alt="sample74"/><i
                                                             class="ion-ios-clock-outline"></i>
-                                                            <%--<div class="date">--%>
-                                                            <%--<span class="day">${news.date}--%>
-                                                            <%--</span>ddd<span class="month">ffff</span>--%>
-                                                            <%--</div>--%>
                                                     </div>
                                                     <figcaption>
                                                         <h3>${news.title}</h3>

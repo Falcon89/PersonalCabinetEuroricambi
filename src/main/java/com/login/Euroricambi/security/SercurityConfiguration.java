@@ -41,7 +41,21 @@ public class SercurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/login")
+                .deleteCookies("JSESSIONID", "Secret_cookei")
+                .and()
+                .authorizeRequests()
+
+                .antMatchers("/newsEditing").hasRole("ADMIN")
+                .antMatchers("/addNewsTechnical").hasRole("ADMIN")
+                .antMatchers("/updateNewsTechnical").hasRole("ADMIN")
+                .antMatchers("/updateNewsTechnical/{id}").hasRole("ADMIN")
+                .antMatchers("/addNews").hasRole("ADMIN")
+                .antMatchers("/addNews/{id}").hasRole("ADMIN")
+                .antMatchers("/updateNews").hasRole("ADMIN")
+                .anyRequest().permitAll();
+//    }
     }
 
     /**

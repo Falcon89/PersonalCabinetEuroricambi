@@ -1,8 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@page session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>Euroricamby</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
@@ -91,7 +92,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label class="custom-file-label text-danger" for="customFile">
+                                                <label class="custom-file-label text-danger">
                                                     файли PNG та JPEG з розширенням 290х35!</label>
                                                 <input class="form-control border-input" type="file" name="file" id="fileChooser"
                                                        onchange="return ValidateFileUpload()" required>
@@ -104,7 +105,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини"></textarea>
+                                                <textarea rows="10" name="text" class="form-control border-input" placeholder="Текст новини" required></textarea>
                                             </div>
                                         </div>
                                     </div>

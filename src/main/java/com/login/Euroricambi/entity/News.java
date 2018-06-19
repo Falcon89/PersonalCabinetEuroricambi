@@ -22,22 +22,23 @@ public class News implements Serializable {
 
     public News() {
     }
+//
+//    public News(long id, String title, LocalDateTime dateTime, String date, String text, String fotonews, String newURL) {
+//        this.id = id;
+//        this.title = title;
+//        this.dateTime = dateTime;
+//        this.date = date;
+//        this.text = text;
+//        this.fotonews = fotonews;
+//        this.newURL = newURL;
+//    }
 
-    public News(long id, String title, LocalDateTime dateTime, String date, String text, String fotonews, String newURL) {
+    public News(long id, String title, String date, String text, String fotonews) {
         this.id = id;
         this.title = title;
-        this.dateTime = dateTime;
         this.date = date;
         this.text = text;
         this.fotonews = fotonews;
-        this.newURL = newURL;
-    }
-
-    public News(long id, String title, String date, String text) {
-        this.id = id;
-        this.title = title;
-        this.date = date;
-        this.text = text;
     }
 
     public String getFotonews() {
@@ -96,16 +97,4 @@ public class News implements Serializable {
         this.date = date;
     }
 
-    @Override
-    public String toString() {
-        return "News{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", dateTime=" + dateTime +
-                ", date='" + date + '\'' +
-                ", text='" + text + '\'' +
-                ", fotonews='" + fotonews + '\'' +
-                ", newURL='" + newURL + '\'' +
-                '}';
-    }
 }

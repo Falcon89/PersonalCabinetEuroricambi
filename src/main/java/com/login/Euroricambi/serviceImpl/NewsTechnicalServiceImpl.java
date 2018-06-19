@@ -45,7 +45,7 @@ NewsTechnical newsTechnicalFromBD = newsTechnicalDao.findOne(newsTechnical.getId
         newsTechnicalFromBD.setTitle(newsTechnical.getTitle());
         newsTechnicalFromBD.setDate(newsTechnical.getDate());
         newsTechnicalFromBD.setText(newsTechnical.getText());
-//        newsTechnicalFromBD.setFotonews(newsTechnical.getFotonews());
+        newsTechnicalFromBD.setFotonews(newsTechnical.getFotonews());
 
         newsTechnicalDao.save(newsTechnicalFromBD);
     }

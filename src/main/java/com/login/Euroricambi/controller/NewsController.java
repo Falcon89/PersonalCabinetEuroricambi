@@ -51,7 +51,7 @@ public class NewsController {
     @GetMapping("/news")
     public String news(Model model) {
 //        model.addAttribute("newses", newsService.findAll());
-        model.addAttribute("newses",NewsUtil.showShortNewsTextForListNews(newsService.findAll()));
+        model.addAttribute("newses", NewsUtil.showShortNewsTextForListNews(newsService.findAll()));
         model.addAttribute("news", new News());
         return "news";
     }
@@ -64,7 +64,7 @@ public class NewsController {
 
     @GetMapping("/newsTechnicallInformation")
     public String newsTechnicallInformation(Model model) {
-        model.addAttribute("newsesTh",NewsUtil.showShortNewsTechnicalForListNewsTechnical(newsTechnicalService.findAll()));
+        model.addAttribute("newsesTh", NewsUtil.showShortNewsTechnicalForListNewsTechnical(newsTechnicalService.findAll()));
         model.addAttribute("newsTechnical", new NewsTechnical());
         return "newsTechnicallInformation";
     }
@@ -85,8 +85,9 @@ public class NewsController {
     public String updateNewsPage(@PathVariable long id,
                                  @RequestParam String title,
                                  @RequestParam String date,
-                                 @RequestParam String text) {
-        newsService.update(new News(id, title, date, text));
+                                 @RequestParam String text,
+                                 @RequestParam String fotonews) {
+        newsService.update(new News(id, title, date, text, fotonews));
         return "redirect:/newsEditing";
     }
 
@@ -107,8 +108,9 @@ public class NewsController {
     public String updateNewsTechnicalPage(@PathVariable long id,
                                           @RequestParam String title,
                                           @RequestParam String date,
-                                          @RequestParam String text) {
-        newsTechnicalService.update(new NewsTechnical(id, title, date, text));
+                                          @RequestParam String text,
+                                          @RequestParam String fotonews) {
+        newsTechnicalService.update(new NewsTechnical(id, title, date, text,fotonews));
         return "redirect:/newsEditing";
     }
 

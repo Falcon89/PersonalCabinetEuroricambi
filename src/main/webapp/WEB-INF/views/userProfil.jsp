@@ -3,6 +3,7 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@page session="true" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +35,7 @@
                         <jsp:include page="managerRequestOne.jsp"/>
                     </div>
                     <div class="col-lg-8 col-md-12">
-                        <div class="card">
+                        <%--<div class="card">--%>
                             <div class="header">
                                 <h4 class="title">Додаткова інформація</h4>
                             </div>
@@ -123,7 +124,7 @@
                                     <div class="clearfix"></div>
                                 </form>
                             </div>
-                        </div>
+                        <%--</div>--%>
                     </div>
                 </div>
             </div>

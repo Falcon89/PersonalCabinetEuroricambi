@@ -25,8 +25,6 @@ public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
     private static final Logger LOGGER = LoggerFactory.getLogger(TerrasoftAuthenticationProvider.class);
 
 
-
-
     private final String ADMIN_LOGIN;
     private final String ADMIN_PASSWORD;
 
@@ -50,13 +48,13 @@ public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
 
 
         if (isAdmin(login, password)) {
-            return new TerrasoftAuthentication(EuroricambiUser.newAdminInstance(), password, Collections.singletonList(new SimpleGrantedAuthority("ADMIN")));
+            return new TerrasoftAuthentication(EuroricambiUser.newAdminInstance(), password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN")));
         }
 
         LoginCheckResponse response = terrasoft.loginCheck(login, password);
         Boolean loginCheck = response.isLoginCheckResult();
 
-        LOGGER.debug("LoginCheck {}",loginCheck);
+        LOGGER.debug("LoginCheck {}", loginCheck);
 
         if (loginCheck == null || !loginCheck) {
             String errorMessage = response.getErrorMessage().getValue();
@@ -71,7 +69,7 @@ public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
                 throw new AuthenticationServiceException("Terrasoft contactInfo not found");
             }
 
-            return new TerrasoftAuthentication(EuroricambiUser.newUserInstance(contactInfo), password, Collections.singletonList(new SimpleGrantedAuthority("USER")));
+            return new TerrasoftAuthentication(EuroricambiUser.newUserInstance(contactInfo), password, Collections.singletonList(new SimpleGrantedAuthority("ROLE_USER")));
         }
     }
 

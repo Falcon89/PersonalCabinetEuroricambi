@@ -42,16 +42,22 @@
                                 <form action="/updateNewsTechnicalPage/${newsTehnical.id}" method="post" accept-charset="UTF-8" novalidate="novalidate">
                                     <div class="row">
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
                                                 <input type="text" class="form-control border-input" name="title" value="${newsTehnical.title}" >
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-md-2">
                                             <div class="form-group">
                                                 <label>Дата новини</label>
                                                 <input type="text" class="form-control border-input" name="date" value="${newsTehnical.date}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label>Фото</label>
+                                                <input type="text" class="form-control border-input" name="fotonews" value="${newsTehnical.fotonews}">
                                             </div>
                                         </div>
                                     </div>

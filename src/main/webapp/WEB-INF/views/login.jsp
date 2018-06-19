@@ -46,7 +46,7 @@
                         <div class="inp_user">
                             <div class="form-group">
                                 <span class="icon-case"><i class="fa++ fa-user++ pass"></i></span>
-                                <input type="text" name="password" placeholder="Пароль" data-rule="required"/>
+                                <input type="password" name="password" placeholder="Пароль" data-rule="required"/>
                                 <div class="validation"></div>
                             </div>
                         </div>

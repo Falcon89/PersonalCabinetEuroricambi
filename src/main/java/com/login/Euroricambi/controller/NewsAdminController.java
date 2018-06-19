@@ -80,7 +80,7 @@ public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @Re
         String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
         System.out.println("filename = "  + filename);
 
-        String newURL = cloudc.createColorImageSize(filename,"red",600, 200, "crop");
+        String newURL = cloudc.createColorImageSize(filename,"red",300, 100, "crop");
         System.out.println("newurl = "  + newURL);
 
         newsTechnicalDao.save(newsTechnical);

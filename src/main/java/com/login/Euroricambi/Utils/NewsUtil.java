@@ -13,7 +13,7 @@ public class NewsUtil {
     private static long id;
 
     public static News showShortNewsText(News news) {
-        if (news.getText().length() > 100) news.setText(news.getText().substring(0, 310) + "...");
+        if (news.getText().length() > 100) news.setText(news.getText().substring(0, 110) + "...");
         return news;
     }
 
@@ -42,7 +42,7 @@ public class NewsUtil {
 
     /**/
     public static NewsTechnical showShortNewsTechnicalText(NewsTechnical newsTechnical) {
-        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 310) + "...");
+        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 110) + "...");
         return newsTechnical;
     }
 
@@ -58,7 +58,7 @@ public class NewsUtil {
 
     /**/
     public static NewsTechnical showShortNewsTechnicalTextIndex(NewsTechnical newsTechnical) {
-        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 310) + "...");
+        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 110) + "...");
         return newsTechnical;
     }
 
@@ -69,12 +69,6 @@ public class NewsUtil {
         }
         return shortNewsTehn;
     }
-
-//    public static News showShortNewsTextIndex(News news) {
-//        if (news.getText().length() > 100) news.setText(news.getText().substring(0, 136) + "...");
-//        return news;
-//    }
-
 
 
 }
