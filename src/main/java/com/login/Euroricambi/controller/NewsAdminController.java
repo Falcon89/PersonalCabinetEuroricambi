@@ -26,12 +26,8 @@ public class NewsAdminController {
     @Autowired
     NewsTechnicalDao newsTechnicalDao;
 
-
-
-
     @Autowired
     CloudinaryConfig cloudc;
-
 
     @PostMapping("/saveNews")
     public String saveNews(@ModelAttribute News news, @RequestParam("file")MultipartFile file){

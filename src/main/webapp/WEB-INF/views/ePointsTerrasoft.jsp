@@ -32,14 +32,14 @@
             <div class="col-xs-7">
                 <div class="numbers">
                     <p>Мої бали по euroricambi</p>
-                    <strong class="point_collro"> 1 050</strong>
+                    <strong class="point_collro">${info.getAccountPointsForEuroricambi().getValue()}</strong>
                 </div>
             </div>
         </div>
         <div class="footer">
             <hr />
             <div class="stats">
-                <a href="index.html"> <i class="ti-reload"></i></a><b> Оновити</b>
+                <a href="${pageContext.request.contextPath}/index"> <i class="ti-reload"></i></a><b> Оновити</b>
             </div>
         </div>
     </div>

@@ -44,7 +44,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>П.І.Б</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Company" value="ТОВ">
+                                                <input type="text" class="form-control border-input" disabled value="${info.getUserName().getValue()}">
                                             </div>
                                         </div>
                                     </div>
@@ -52,19 +52,19 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>ЕГРПОН/ОКПО</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Username" value="5464564654">
+                                                <input type="text" class="form-control border-input" disabled value="${info.getEvidenceRegistryNumber().getValue()}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Платник ПДВ</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Username" value="454654564">
+                                                <input type="text" class="form-control border-input" disabled value="${info.getVATPayerName().getValue()}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Свідоцтво ПДВ</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Username" value="Так">
+                                                <input type="text" class="form-control border-input" disabled  value="${info.getEvidenceDocument().getValue()}">
                                             </div>
                                         </div>
                                     </div>
@@ -74,7 +74,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Адреса</label>
-                                                <input type="text" class="form-control border-input" disabled  placeholder="Home Address" value="Львів, Україна">
+                                                <input type="text" class="form-control border-input" disabled  value="${info.getStreet().getValue()} ">
                                             </div>
                                         </div>
                                     </div>
@@ -83,19 +83,19 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Індекс</label>
-                                                <input type="text" class="form-control border-input" disabled  placeholder="City" value="456465">
+                                                <input type="text" class="form-control border-input" disabled   value="${info.getZipCode().getValue()}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Область</label>
-                                                <input type="text" class="form-control border-input" disabled placeholder="Country" value="Львівська">
+                                                <input type="text" class="form-control border-input" disabled  value="${info.getRegion().getValue()}">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Населений пункт</label>
-                                                <input type="number" class="form-control border-input" disabled placeholder="Львів">
+                                                <input type="text" class="form-control border-input" disabled  value="${info.getLocality().getValue()}">
                                             </div>
                                         </div>
                                     </div>
@@ -103,20 +103,20 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>E-mail</label>
-                                                <input type="text" class="form-control border-input" disabled  placeholder="Home Address" value="euroricamby@gmail.com">
+                                                <input type="text" class="form-control border-input" disabled   value="${info.getEmail().getValue()}">
                                             </div>
                                         </div>
 
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Телефон 1</label>
-                                                <input type="text" class="form-control border-input" disabled  placeholder="Home Address" value="+38097775555">
+                                                <input type="text" class="form-control border-input" disabled   value="${info.getMobilePhone().getValue()}">
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Телефон 2</label>
-                                                <input type="text" class="form-control border-input" disabled  placeholder="Home Address" value="+38097775555">
+                                                <input type="text" class="form-control border-input" disabled   value="${info.getPhone().getValue()}">
                                             </div>
                                         </div>
                                     </div>

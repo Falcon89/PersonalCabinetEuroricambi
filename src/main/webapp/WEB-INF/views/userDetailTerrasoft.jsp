@@ -28,7 +28,7 @@
     <div class="content">
         <div class="author">
             <img class="avatar border-white" src="images/user_log.png" alt="..."/>
-            <h4 class="title">${info.getPhone().getValue()}<br/>
+            <h4 class="title">${info.getAccountName().getValue()}<br/>
             </h4>
         </div>
     </div>
@@ -37,21 +37,21 @@
         <div class="row">
             <div class="col-md-3 col-md-offset-1">
                 <h5>
-                    <strong class="point_collro">133 666<br/>
+                    <strong class="point_collro">${info.getSaldoSel().getValue()}<br/>
                     </strong>Сальдо</h5>
             </div>
             <div class="col-md-4">
-                <h5><strong class="point_collro">250 000<br/>
+                <h5><strong class="point_collro">${info.getLimit().getValue()}<br/>
                 </strong>Ліміт</h5>
             </div>
             <div class="col-md-3">
-                <h5><strong class="point_collro">21<br/>
+                <h5><strong class="point_collro">${info.getDelay().getValue()}<br/>
                 </strong>Термін</h5>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <h5><strong class="point_collro">Безготовковий перерахунок<br/>
+                <h5><strong class="point_collro">${info.getPaymentTypeName().getValue()}<br/>
                 </strong>Спосіб оплати</h5>
             </div>
 

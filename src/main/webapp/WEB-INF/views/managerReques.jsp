@@ -34,7 +34,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Заголовок</label>
-                                        <input type="text" name="title" class="form-control border-input"   placeholder="Home Address" value="Львів, Україна">
+                                        <input type="text" name="title" class="form-control border-input" value="">
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Від кого</label>
-                                        <input type="text" name="userName" class="form-control border-input"   placeholder="Home Address" value="Іванов Іван Іванович">
+                                        <input type="text" name="userName" class="form-control border-input" value="${info.getAccountName().getValue()}">
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Опис</label>
-                                        <textarea rows="10" cols="45" type="text" name="message" class="form-control border-input"   placeholder="Текст для менеджера" value=""> </textarea>
+                                        <textarea rows="10" cols="45" type="text" name="message" class="form-control border-input"> </textarea>
                                     </div>
                                 </div>
                             </div>

@@ -29,7 +29,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
 
                             <i class="fa fa-phone number close_1+"></i>
                             <p class="number">067 050 050 050</p>

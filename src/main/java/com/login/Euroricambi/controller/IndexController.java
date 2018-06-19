@@ -33,32 +33,15 @@ public class IndexController {
     @Autowired
     private NewsTechnicalService newsTechnicalService;
 
-private TerrasoftAuthentication terrasoftAuthentication;
+    private TerrasoftAuthentication terrasoftAuthentication;
 
-
-    //    @RequestMapping("/index")
-//    public String index() {
-//        return "index";
-//    }
     @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET, produces = "text/html;charset=UTF-8")
-    public String index(Model model,@AuthenticationPrincipal TerrasoftAuthentication authentication) {
-        EuroricambiUser user = (EuroricambiUser)  authentication.getPrincipal();
+    public String index(Model model, @AuthenticationPrincipal TerrasoftAuthentication authentication) {
+        EuroricambiUser user = (EuroricambiUser) authentication.getPrincipal();
         GetAccountInfoForProjectEuroricambiResponse response = terrasoftService.getAccountInfoForProjectEuroricambi(user.getContactId());
         AccountInfoForProjectEuroricambi info = response.getGetAccountInfoForProjectEuroricambiResult().getValue();
-
-//        model.addAttribute("phone", info.getPhone().getValue());
-        model.addAttribute("info",info);
-
-
-//        System.out.println(terrasoftService.getAccountInfoForProjectEuroricambi(euroricambiUser.getContactId()).getGetAccountInfoForProjectEuroricambiResult().getValue());
-//model2.addObject("log", terrasoftService.getAccountInfoForProjectEuroricambi(model2.getViewName()));
-//        LoginCheckResponse response = terrasoft.loginCheck("","");
-//        ContactInfo info = response.getCInfo().getValue();
-//        model.addAttribute("username", info.getFirstName().getValue());
-//        model.addAttribute("password", info.getLastName().getValue());
-//        model.addAttribute("other", info.getClientStoreCityName().getValue());
-//        model.addAttribute("log", info.getLogin().getValue());
-
+//        model.addAttribute("phone", info.getPaymentTypeName().getValue());
+        model.addAttribute("info", info);
 
         List<News> newses = newsService.findFourLastNews();
         if (!newses.isEmpty()) {
@@ -71,16 +54,4 @@ private TerrasoftAuthentication terrasoftAuthentication;
         }
         return "index";
     }
-
-//    @PostMapping("/")
-//    public String indexAfterLogin() {
-//        return "redirect:/index";
-//    }
-//
-//    @GetMapping("/index")
-//    public String newsIndex(Model model) {
-//
-//        return "index";
-//    }
-
 }
