@@ -22,16 +22,6 @@ public class News implements Serializable {
 
     public News() {
     }
-//
-//    public News(long id, String title, LocalDateTime dateTime, String date, String text, String fotonews, String newURL) {
-//        this.id = id;
-//        this.title = title;
-//        this.dateTime = dateTime;
-//        this.date = date;
-//        this.text = text;
-//        this.fotonews = fotonews;
-//        this.newURL = newURL;
-//    }
 
     public News(long id, String title, String date, String text, String fotonews) {
         this.id = id;
