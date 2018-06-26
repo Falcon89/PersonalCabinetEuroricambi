@@ -35,19 +35,18 @@
                             <p class="number">067 050 050 050</p>
                         </a>
                     </li>
-                    <li class="close_1">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="ti-user number "></i>
-                            <p class="number">Персональний менеджер</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-envelope number"></i>
-                            <p class="number">Онлайн допомога</p>
-                        </a>
-                    </li>
-
+                    <%--<li class="close_1">--%>
+                        <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+                            <%--<i class="ti-user number "></i>--%>
+                            <%--<p class="number">Персональний менеджер</p>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
+                    <%--<li>--%>
+                        <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+                            <%--<i class="fa fa-envelope number"></i>--%>
+                            <%--<p class="number">Онлайн допомога</p>--%>
+                        <%--</a>--%>
+                    <%--</li>--%>
                 </ul>
             </div>
         </div>

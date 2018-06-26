@@ -71,6 +71,8 @@
 
                     <div class="col-lg-12 col-md-12">
                         <div class="card">
+
+                            <style>.card{background-color: #ffffff00!important;}</style>
                             <div class="header">
                                 <h4 class="title">Додавання новини</h4>
                             </div>
@@ -79,24 +81,27 @@
                                       accept-charset="UTF-8"
                                       enctype="multipart/form-data" class="form-horizontal form-label-left">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-lg-6">
                                             <div class="form-group">
                                                 <label>Назва новини</label>
                                                 <input type="text" name="title" class="form-control border-input"
                                                        placeholder="Назва новини">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
                                                 <label>Дата новини</label>
                                                 <input type="text" name="date" class="form-control border-input"
                                                        placeholder="01.06.2018">
                                             </div>
                                         </div>
-                                        <div class="col-md-3">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <label>Додати фото</label>
-                                                <input class="form-control border-input" type="file" name="file"required>
+                                                <label class="custom-file-label text-danger">
+                                                    файли PNG та JPEG з розширенням 800х320!</label>
+                                                <%--<label>Додати фото</label>--%>
+                                                <input class="form-control border-input" type="file"  name="file" id="fileChooser"
+                                                       onchange="return ValidateFileUpload()" required>
 
                                             </div>
                                         </div>
@@ -126,6 +131,44 @@
         <jsp:include page="footer.jsp"/>
     </div>
 </div>
+<SCRIPT type="text/javascript">
+    function ValidateFileUpload() {
+        var fuData = document.getElementById('fileChooser');
+        var FileUploadPath = fuData.value;
+
+//To check if user upload any file
+        if (FileUploadPath == '') {
+            alert("Завантажте зображення");
+
+        } else {
+            var Extension = FileUploadPath.substring(
+                FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+
+//The file uploaded is an image
+
+            if (Extension == "png" || Extension == "jpeg" || Extension == "jpg") {
+
+// To Display
+                if (fuData.files && fuData.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#blah').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(fuData.files[0]);
+                }
+
+            }
+
+//The file upload is NOT an image
+            else {
+                alert("Фото підтримує лише типи файлів PNG, JPG та JPEG з розширенням 800x320.");
+
+            }
+        }
+    }
+</SCRIPT>
 </body>
 <jsp:include page="include_js.jsp"/>
 </html>

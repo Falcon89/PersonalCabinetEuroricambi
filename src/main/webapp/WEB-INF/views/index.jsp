@@ -90,6 +90,10 @@
                                                             class="ion-ios-clock-outline"></i>
                                                     </div>
                                                     <figcaption>
+
+                                                        <style>
+                                                            figure.snip1237 figcaption:before{background-image:none!important; background-color:#ffffff00!important;}
+                                                        </style>
                                                         <h3>${news.title}</h3>
                                                         <p>${news.text}</p>
                                                         <a href="/newsFull/${news.id}" class="read-more">Читати

@@ -62,7 +62,7 @@
                     </a>
                 </li>
 </sec:authorize>
-                <li class="close_1">
+                <li class="close_1+">
                     <a class="boton-icono log_color" href="/logout" title="Вийти"><i class="fa fa-sign-out " aria-hidden="true"></i>
                         <p>Вийти</p>
                     </a>

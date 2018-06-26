@@ -71,6 +71,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="card">
+                            <style>.card{background-color: #ffffff00!important;}</style>
                             <div class="header">
                                 <h4 class="title">Додавання новини</h4>
                             </div>
@@ -160,7 +161,7 @@
 
 //The file upload is NOT an image
             else {
-                alert("Фото підтримує лише типи файлів PNG, JPG та JPEG з розширенням 290х280.");
+                alert("Фото підтримує лише типи файлів PNG, JPG та JPEG з розширенням 290х35.");
 
             }
         }

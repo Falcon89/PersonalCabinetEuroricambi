@@ -40,9 +40,9 @@
                             </div>
                             <br>
                             <div class="post-content ">
-                                <a href="#"><img src="${newsTechnical.fotonews}" alt="" class="img-responsive"></a>
+                              <img src="${newsTechnical.fotonews}" alt="" class="img-responsive">
                                 <p class="text-centr">${newsTechnical.text}</p>
-                                <p>www.strans.ua </p>
+                                <p>euroricambi.com.ua</p>
 
                             </div>
                         </article>

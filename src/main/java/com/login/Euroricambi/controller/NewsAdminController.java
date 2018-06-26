@@ -47,7 +47,7 @@ public class NewsAdminController {
             System.out.println("filename = "  + filename);
 
             // String newURL = cloudc.createUrl(filename,100,50, "crop");
-            String newURL = cloudc.createColorImageSize(filename,"red",300, 80, "crop");
+            String newURL = cloudc.createColorImageSize(filename,"red",300, 35, "crop");
             System.out.println("newurl = "  + newURL);
 
 //            news.setFotonews(newURL);
@@ -80,7 +80,7 @@ public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @Re
         String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
         System.out.println("filename = "  + filename);
 
-        String newURL = cloudc.createColorImageSize(filename,"red",300, 100, "crop");
+        String newURL = cloudc.createColorImageSize(filename,"red",800, 320, "crop");
         System.out.println("newurl = "  + newURL);
 
         newsTechnicalDao.save(newsTechnical);
