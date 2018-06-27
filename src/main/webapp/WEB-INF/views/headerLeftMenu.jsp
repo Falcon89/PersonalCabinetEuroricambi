@@ -76,5 +76,10 @@
         </div>
     </div>
 </header>
+<!-- RedHelper -->
+<script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
+        src="https://web.redhelper.ru/service/main.js?c=falcon8989">
+</script>
+<!--/Redhelper -->
 </body>
 </html>
