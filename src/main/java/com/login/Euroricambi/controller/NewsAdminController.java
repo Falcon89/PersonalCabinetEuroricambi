@@ -47,7 +47,7 @@ public class NewsAdminController {
             System.out.println("filename = "  + filename);
 
             // String newURL = cloudc.createUrl(filename,100,50, "crop");
-            String newURL = cloudc.createColorImageSize(filename,"red",300, 35, "crop");
+            String newURL = cloudc.createColorImageSize(filename,"red",310, 210, "crop");
             System.out.println("newurl = "  + newURL);
 
 //            news.setFotonews(newURL);

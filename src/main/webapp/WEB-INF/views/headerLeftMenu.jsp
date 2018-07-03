@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 </head>
 <fmt:requestEncoding value="UTF-8"/>
 <body>
@@ -23,47 +24,48 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="${pageContext.request.contextPath}/index">
+                <li class="active+ green">
+                    <a class="green" href="${pageContext.request.contextPath}/index">
                         <i class="ti-home"></i>
                         <p>Головна</p>
                     </a>
                 </li>
-                <li>
+                <li class="green">
                     <a href="${pageContext.request.contextPath}/userProfil">
                         <i class="ti-user close_1"></i>
                         <p>Профіль користувача</p>
                     </a>
                 </li>
-                <li>
+                <li class="green">
                     <a href="${pageContext.request.contextPath}/catalogue">
                         <i class="ti-view-list-alt close_1"></i>
                         <p>Каталог Euroricambi</p>
                     </a>
                 </li>
-                <li>
+                <li class="green">
                     <a href="${pageContext.request.contextPath}/newsTechnicallInformation">
                         <i class="ti-comment-alt close_1"></i>
                         <p>Технічна інформація</p>
                     </a>
                 </li>
 
-                <li>
+                <li class="green">
                     <a href="${pageContext.request.contextPath}/news">
-                        <i class="ti-bell close_1"></i>
+                        <i class="far fa-bell close_1"></i>
                         <p>Новини</p>
                     </a>
                 </li>
 <sec:authorize access="hasRole('ROLE_ADMIN')">
-                <li>
+                <li class="green">
                     <a href="${pageContext.request.contextPath}/newsEditing">
                         <i class="ti-bell+ close_1"></i>
+                        <i class="far fa-address-card"></i>
                         <p>Адміністрування</p>
                     </a>
                 </li>
 </sec:authorize>
                 <li class="close_1+">
-                    <a class="boton-icono log_color" href="/logout" title="Вийти"><i class="fa fa-sign-out " aria-hidden="true"></i>
+                    <a class="boton-icono log_color" href="/logout" title="Вийти"><i class="fas fa-sign-out-alt" aria-hidden="true"></i>
                         <p>Вийти</p>
                     </a>
                 </li>

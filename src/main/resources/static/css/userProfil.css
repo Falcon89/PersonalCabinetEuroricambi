@@ -197,6 +197,11 @@ figure.snip1237.hover:after {
 .h5h{
     font-style: italic;
 }
-
+.green a:hover{
+  color: #1d9718!important;
+}
+.green li:hover{
+  color: #1d9718!important;
+}
 
 

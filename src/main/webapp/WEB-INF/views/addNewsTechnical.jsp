@@ -18,6 +18,8 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <link href="favicon.ico" rel="shortcut icon">
+    <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
@@ -77,6 +79,7 @@
                                 <h4 class="title">Додавання новини</h4>
                             </div>
                             <div class="content">
+
                                 <form action="./saveNewsTechnical?${_csrf.parameterName}=${_csrf.token}" method="post"
                                       accept-charset="UTF-8"
                                       enctype="multipart/form-data" class="form-horizontal form-label-left">
@@ -95,7 +98,7 @@
                                                        placeholder="01.06.2018">
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-12">
                                             <div class="form-group">
                                                 <label class="custom-file-label text-danger">
                                                     файли PNG та JPEG з розширенням 800х320!</label>
@@ -111,16 +114,33 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" name="text" class="form-control border-input"
+                                                <textarea rows="10" id="mytextarea" name="text" class="form-control border-input"
                                                           placeholder="Текст новини"></textarea>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <style>
+                                        form {}
+
+                                        textarea#editable {}
+                                    </style>
+                                    <script>
+
+                                        tinymce.init({
+                                            selector: '#mytextarea'
+                                        });</script>
+                                    <script>
+
+                                        tinymce.init({
+                                            selector: '#mytextarea'
+                                        });</script>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-success  btn-wd">Добавити</button>
                                     </div>
                                     <div class="clearfix"></div>
                                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
                                 </form>
                             </div>
                         </div>

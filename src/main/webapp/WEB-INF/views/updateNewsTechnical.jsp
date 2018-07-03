@@ -18,6 +18,8 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <link href="favicon.ico" rel="shortcut icon">
+    <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <jsp:include page="include_css.jsp"/>
 <fmt:requestEncoding value="UTF-8"/>
@@ -66,12 +68,27 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Текст новини</label>
-                                                <textarea rows="10" class="form-control border-input"  type="text" name="text" >
+                                                <textarea rows="10" id="mytextarea" class="form-control border-input"  type="text" name="text" >
                                                     <c:out value="${newsTehnical.text}"/>
                                                 </textarea>
                                             </div>
                                         </div>
                                     </div>
+                                    <style>
+                                        form {}
+
+                                        textarea#editable {}
+                                    </style>
+                                    <script>
+
+                                        tinymce.init({
+                                            selector: '#mytextarea'
+                                        });</script>
+                                    <script>
+
+                                        tinymce.init({
+                                            selector: '#mytextarea'
+                                        });</script>
                                     <div class="text-center">
                                         <button type="submit" class="btn btn-success  btn-wd">Зберегти</button>
                                     </div>

@@ -19,3 +19,7 @@
 
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 <script src="${pageContext.request.contextPath}/assets/js/demo.js"></script>
+
+<%----%>
+<script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
