@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Euroricamby</title>
+    <title>Euroricambi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <link href="favicon.ico" rel="shortcut icon">
@@ -35,13 +35,13 @@
                 <div class="row">
 
                     <c:forEach var="newsTechnical" items="${newsesTh}">
-                    <div class=" col-sm-12 col-md-5 col-lg-5">
+                    <div class=" col-sm-10 col-md-10 col-lg-5">
                         <div class="row">
                             <div class="leftbar_content">
                                 <!--            <h2>The New Stuff</h2>-->
                                 <div class="single_stuff wow fadeInDown">
-                                    <div class="single_stuff_img"> <a href="${pageContext.request.contextPath}/newsTechnicallInformationFull">
-                                        <img src="${newsTechnical.fotonews}" alt=""></a> </div>
+                                    <div class="single_stuff_img">
+                                        <img src="${newsTechnical.fotonews}" alt=""> </div>
                                     <div class="single_stuff_article">
                                         <div class="single_sarticle_inner">
                                             <div class="">
@@ -52,12 +52,13 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class="col-lg-10">
-                                                <h2><a>${newsTechnical.title}</a></h2>
+                                            <div class="col-lg-10 technicalColor technicaltextdown">
+                                                <a class="technicaltext">${newsTechnical.title}</a>
                                             </div>
-                                            <div>
+                                            <br>
 
-                                                <p class="text-centr">${newsTechnical.text}</p></div>
+                                            <div>
+                                                <p class="text-centr technicaltext2">${newsTechnical.text}</p></div>
                                             <div class="rign">
                                                 <a href="/newsTechnicallInformationFull/${newsTechnical.id}" class="read-more">Детальныше</a>
                                             </div>

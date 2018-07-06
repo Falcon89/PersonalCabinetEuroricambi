@@ -76,7 +76,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .single_stuff_img a{display:block; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 .single_stuff_img img{max-width:100%}
 .single_stuff_article{float:left; display:inline; width:100%; background-color:#fff; border-bottom:1px solid #bebebd; border-left:1px solid #e3e3e3; border-right:1px solid #bebebd}
-.single_sarticle_inner{background-color:#fff; display:inline; float:left; margin:-60px 20px 0; padding:10px 20px; width:auto}
+.single_sarticle_inner{
+	background-color:#fff;
+	display:inline;
+	float:left;
+	margin:-60px 20px 0;
+	padding:10px 20px;
+	width:auto}
 
 .stuff_category{
     color:#444; 
@@ -340,4 +346,47 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     text-align: justify;
 }
 
+.technicalColor a{
+	color: black!important;
+}
 
+
+
+/*.technicaltext{*/
+	/*font-size: 18px;*/
+	/*font-weight: bold;*/
+	/*margin-top: 15px;*/
+/*}*/
+/*@media (max-height: 1600px) and (min-height: 1000px) {*/
+
+	/*.technicaltext1{*/
+		/*margin-left: 20px;*/
+		/*margin-top: 10px;*/
+	/*}*/
+	/*.techn{*/
+		/*margin-left: 20px;*/
+		/*margin-top: 10px;*/
+	/*}*/
+/*}*/
+/*@media (max-height: 1550px) and (min-height: 1290px) {*/
+
+	/*.technicaltext1{*/
+		/*margin-left: 20px;*/
+		/*margin-top: 10px;*/
+	/*}*/
+/*}*/
+
+/*@media (max-height: 1290px) and (min-height: 1199px) {*/
+
+	/*.technicaltext1{*/
+		/*margin-left: 30px;*/
+		/*margin-top: -10px;*/
+	/*}*/
+/*}*/
+/*@media (max-height: 1199px) and (min-height: 1199px) {*/
+
+	/*.technicaltext1{*/
+		/*margin-left: 35px;*/
+		/*margin-top: -10px;*/
+	/*}*/
+/*}*/

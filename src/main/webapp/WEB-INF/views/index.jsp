@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Euroricamby</title>
+    <title>Euroricambi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
     <link href="favicon.ico" rel="shortcut icon">
@@ -38,7 +38,7 @@
                         <div class="card">
                             <div class="content">
                                 <div class="row">
-                                    <div class="row">
+
                                         <div class="leftbar_content">
                                             <h2>Технічная інформація</h2>
                                             <c:forEach var="newsTechnical" items="${newsesTh}">
@@ -56,11 +56,12 @@
                                                                 </div>
                                                             </div>
                                                             <br>
-                                                            <div class="col-lg-10">
-                                                                <h2><a>${newsTechnical.title}</a></h2>
+                                                            <div class="col-lg-10 technicalColor technicaltextdownindex+">
+                                                                <a class="technicaltext technicaltextindex">${newsTechnical.title}</a>
                                                             </div>
+                                                            <br>
                                                             <div>
-                                                                <p class="text-centr">${newsTechnical.text}</p></div>
+                                                                <p class="text-centr technicaltext2+">${newsTechnical.text}</p></div>
                                                             <div class="rign">
                                                                 <a href="/newsTechnicallInformationFull/${newsTechnical.id}"
                                                                    class="read-more">Детальныше</a>
@@ -71,7 +72,7 @@
                                             </c:forEach>
                                         </div>
                                     </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -94,7 +95,7 @@
                                                         <style>
                                                             figure.snip1237 figcaption:before{background-image:none!important; background-color:#ffffff00!important;}
                                                         </style>
-                                                        <h3>${news.title}</h3>
+                                                        <p class="technicaltextindex">${news.title}</p>
                                                         <p>${news.text}</p>
                                                         <a href="/newsFull/${news.id}" class="read-more">Читати
                                                             більше</a>

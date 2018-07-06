@@ -148,6 +148,7 @@ body {
 
 a {
   color: #68B3C8; }
+
   a:hover, a:focus {
     color: #3091B2;
     text-decoration: none; }

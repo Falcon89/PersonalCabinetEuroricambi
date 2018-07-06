@@ -16,5 +16,7 @@ public interface NewsService {
 
     List<News> findFourLastNews();
 
+    List<News> findForFirstNews();
+
     void update(News news);
 }

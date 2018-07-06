@@ -13,9 +13,12 @@ import java.util.List;
 //@EnableJpaRepositories("com.login.Euroricambi.service.dao")
 //@ComponentScan(basePackages = { "com.login.Euroricambi.service.dao" })
 //@EntityScan("com.login.Euroricambi.service.dao")
-public interface NewsTechnicalDao extends JpaRepository<NewsTechnical, Long>{
-NewsTechnical findOne(Long id);
-    @Query(value = "select * from news_" +
-            "technical order by date_time desc limit 1", nativeQuery = true)
+public interface NewsTechnicalDao extends JpaRepository<NewsTechnical, Long> {
+    NewsTechnical findOne(Long id);
+
+    @Query(value = "select * from news_" + "technical order by date_time desc limit 1", nativeQuery = true)
     List<NewsTechnical> findFourLastNewsTechnical();
+
+        @Query(value = "select * from news_" + "technical order by date_time desc limit 4000", nativeQuery = true)
+    List<NewsTechnical> findFourFirstNewsTechnical();
 }

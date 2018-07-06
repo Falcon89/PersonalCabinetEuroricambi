@@ -26,7 +26,7 @@
             <ul class="nav">
                 <li class="active+ green">
                     <a class="green" href="${pageContext.request.contextPath}/index">
-                        <i class="ti-home"></i>
+                        <i class="ti-home close_1+"></i>
                         <p>Головна</p>
                     </a>
                 </li>
@@ -51,14 +51,14 @@
 
                 <li class="green">
                     <a href="${pageContext.request.contextPath}/news">
-                        <i class="far fa-bell close_1"></i>
+                        <i class="far fa-bell close_1 "></i>
                         <p>Новини</p>
                     </a>
                 </li>
 <sec:authorize access="hasRole('ROLE_ADMIN')">
                 <li class="green">
                     <a href="${pageContext.request.contextPath}/newsEditing">
-                        <i class="ti-bell+ close_1"></i>
+                        <i class="ti-bell+ "></i>
                         <i class="far fa-address-card"></i>
                         <p>Адміністрування</p>
                     </a>

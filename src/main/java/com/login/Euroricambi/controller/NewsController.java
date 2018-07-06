@@ -13,6 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 public class NewsController {
 
@@ -51,8 +53,11 @@ public class NewsController {
     @GetMapping("/news")
     public String news(Model model) {
 //        model.addAttribute("newses", newsService.findAll());
-        model.addAttribute("newses", NewsUtil.showShortNewsTextForListNews(newsService.findAll()));
-        model.addAttribute("news", new News());
+        List<News> newses = newsService.findForFirstNews();
+        if(!newses.isEmpty()) {
+            model.addAttribute("newses", NewsUtil.showShortNewsTextForListNews(newsService.findForFirstNews()));
+//        model.addAttribute("news", new News());
+        }
         return "news";
     }
 
@@ -64,8 +69,8 @@ public class NewsController {
 
     @GetMapping("/newsTechnicallInformation")
     public String newsTechnicallInformation(Model model) {
-        model.addAttribute("newsesTh", NewsUtil.showShortNewsTechnicalForListNewsTechnical(newsTechnicalService.findAll()));
-        model.addAttribute("newsTechnical", new NewsTechnical());
+        model.addAttribute("newsesTh", NewsUtil.showShortNewsTechnicalForListNewsTechnical(newsTechnicalService.findFourFirstNewsTechnical()));
+//        model.addAttribute("newsTechnical", new NewsTechnical());
         return "newsTechnicallInformation";
     }
 

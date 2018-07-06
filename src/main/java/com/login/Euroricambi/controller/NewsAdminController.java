@@ -30,66 +30,60 @@ public class NewsAdminController {
     CloudinaryConfig cloudc;
 
     @PostMapping("/saveNews")
-    public String saveNews(@ModelAttribute News news, @RequestParam("file")MultipartFile file){
+    public String saveNews(@ModelAttribute News news, @RequestParam("file") MultipartFile file) {
         LocalDateTime giveMinitesLater = LocalDateTime.now();
-        if (file.isEmpty()){
+        if (file.isEmpty()) {
             return "redirect:/index";
         }
-        try
-        {   //image is saved into MAP uploadresult
+        try {   //image is saved into MAP uploadresult
 
-            Map uploadResult =  cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));
+            Map uploadResult = cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));
             news.setFotonews(uploadResult.get("url").toString());
 
 
-
             String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
-            System.out.println("filename = "  + filename);
+            System.out.println("filename = " + filename);
 
             // String newURL = cloudc.createUrl(filename,100,50, "crop");
-            String newURL = cloudc.createColorImageSize(filename,"red",310, 210, "crop");
-            System.out.println("newurl = "  + newURL);
+            String newURL = cloudc.createColorImageSize(filename, "red", 310, 210, "crop");
+            System.out.println("newurl = " + newURL);
 
 //            news.setFotonews(newURL);
-//            news.setDateTime(LocalDateTime.now());
+            news.setNewURL(newURL);
+            news.setDateTime(LocalDateTime.now());
             newsDao.save(news);
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
             return "redirect:/newsEditing";
         }
         return "redirect:/newsEditing";
     }
-/**/
+    /**/
 
-@PostMapping("/saveNewsTechnical")
-public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @RequestParam("file")MultipartFile file){
+    @PostMapping("/saveNewsTechnical")
+    public String saveNewsTechnical(@ModelAttribute NewsTechnical newsTechnical, @RequestParam("file") MultipartFile file) {
 
-    if (file.isEmpty()){
+        if (file.isEmpty()) {
+            return "redirect:/newsEditing";
+        }
+        try {   //image is saved into MAP uploadresult
+
+            Map uploadResult = cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));
+            newsTechnical.setFotonews(uploadResult.get("url").toString());
+
+
+            String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
+            System.out.println("filename = " + filename);
+
+            String newURL = cloudc.createColorImageSize(filename, "red", 800, 320, "crop");
+            System.out.println("newurl = " + newURL);
+            newsTechnical.setNewURL(newURL);
+            newsTechnical.setDateTime(LocalDateTime.now());
+            newsTechnicalDao.save(newsTechnical);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return "redirect:/newsEditing";
+        }
         return "redirect:/newsEditing";
     }
-    try
-    {   //image is saved into MAP uploadresult
-
-        Map uploadResult =  cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));
-        newsTechnical.setFotonews(uploadResult.get("url").toString());
-
-
-
-        String filename = uploadResult.get("public_id").toString() + "." + uploadResult.get("format").toString();
-        System.out.println("filename = "  + filename);
-
-        String newURL = cloudc.createColorImageSize(filename,"red",800, 320, "crop");
-        System.out.println("newurl = "  + newURL);
-
-        newsTechnicalDao.save(newsTechnical);
-    }
-    catch (IOException e)
-    {
-        e.printStackTrace();
-        return "redirect:/newsEditing";
-    }
-    return "redirect:/newsEditing";
-}
 }

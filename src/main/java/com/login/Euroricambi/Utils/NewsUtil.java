@@ -13,7 +13,8 @@ public class NewsUtil {
     private static long id;
 
     public static News showShortNewsText(News news) {
-        if (news.getText().length() > 100) news.setText(news.getText().substring(0, 110) + "...");
+        if (news.getText().length() > 100) news.setText(news.getText().substring(0, 110) + "</>" + "...");
+        if (news.getTitle().length() > 16) news.setTitle(news.getTitle().substring(0, 15) + "</>" + "...");
         return news;
     }
 
@@ -26,8 +27,8 @@ public class NewsUtil {
     }
     /**/
     public static News shortNewsTextIndex(News news) {
-        if (news.getText().length() > 60) news.setText(news.getText().substring(0, 136) + "...");
-        if (news.getTitle().length() > 30) news.setTitle(news.getTitle().substring(0, 28) + "...");
+        if (news.getText().length() > 60) news.setText(news.getText().substring(0, 136) + "</>" + "...");
+        if (news.getTitle().length() >16) news.setTitle(news.getTitle().substring(0, 15) + "</>" + "...");
         return news;
     }
 
@@ -42,7 +43,8 @@ public class NewsUtil {
 
     /**/
     public static NewsTechnical showShortNewsTechnicalText(NewsTechnical newsTechnical) {
-        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 110) + "...");
+        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 260) + "</>" + "...");
+        if (newsTechnical.getTitle().length()  > 20) newsTechnical.setTitle(newsTechnical.getTitle().substring(0,25) + "</>" + "...");
         return newsTechnical;
     }
 
@@ -58,7 +60,8 @@ public class NewsUtil {
 
     /**/
     public static NewsTechnical showShortNewsTechnicalTextIndex(NewsTechnical newsTechnical) {
-        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 110) + "...");
+        if (newsTechnical.getText().length() > 100) newsTechnical.setText(newsTechnical.getText().substring(0, 200) +"</>" + "...");
+        if (newsTechnical.getTitle().length()  > 20) newsTechnical.setTitle(newsTechnical.getTitle().substring(0,30) + "</>" + "...");
         return newsTechnical;
     }
 

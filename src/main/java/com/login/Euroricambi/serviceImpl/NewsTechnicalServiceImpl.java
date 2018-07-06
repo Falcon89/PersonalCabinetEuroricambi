@@ -38,6 +38,11 @@ private NewsTechnicalDao newsTechnicalDao;
         return newsTechnicalDao.findFourLastNewsTechnical();
     }
 
+    @Override
+    public List<NewsTechnical> findFourFirstNewsTechnical() {
+        return newsTechnicalDao.findFourFirstNewsTechnical();
+    }
+
 
     @Override
     public void update(NewsTechnical newsTechnical) {

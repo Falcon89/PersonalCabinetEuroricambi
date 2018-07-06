@@ -36,6 +36,10 @@ newsDao.delete(id);
     public List<News> findFourLastNews() {
         return newsDao.findFourLastNews();
     }
+    @Override
+    public List<News> findForFirstNews(){
+        return newsDao.findForFirstNews();
+    }
 
 
     @Override

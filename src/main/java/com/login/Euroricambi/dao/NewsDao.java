@@ -17,4 +17,8 @@ News findOne(Long id);
 
     @Query(value = "select * from news order by date_time desc limit 2", nativeQuery = true)
     List<News> findFourLastNews();
+
+    @Query(value = "select * from news order by date_time desc limit 4000", nativeQuery = true)
+    List<News> findForFirstNews();
+
 }

@@ -16,5 +16,7 @@ public interface NewsTechnicalService {
 
     List<NewsTechnical> findFourLastNewsTechnical();
 
+    List<NewsTechnical> findFourFirstNewsTechnical();
+
     void update(NewsTechnical newsTechnical);
 }
