@@ -34,7 +34,7 @@ public class TerrasoftAuthenticationProvider implements AuthenticationProvider {
     public TerrasoftAuthenticationProvider(TerrasoftService terrasoft) {
         this.terrasoft = terrasoft;
         this.ADMIN_LOGIN = "admin";
-        this.ADMIN_PASSWORD = "**";
+        this.ADMIN_PASSWORD = "*";
     }
 
     @Override

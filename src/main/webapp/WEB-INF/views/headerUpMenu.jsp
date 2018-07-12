@@ -32,7 +32,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown">
 
                             <i class="fa fa-phone number close_1+"></i>
-                            <p class="number">067 050 050 050</p>
+                            <p class="number">067 00 54 455</p>
                         </a>
                     </li>
                     <%--<li class="close_1">--%>

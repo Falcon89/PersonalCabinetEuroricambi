@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link href="favicon.ico" rel="shortcut icon">
+    <link href="${pageContext.request.contextPath}/favicon.ico" rel="shortcut icon">
 </head>
 <body>
 <header>

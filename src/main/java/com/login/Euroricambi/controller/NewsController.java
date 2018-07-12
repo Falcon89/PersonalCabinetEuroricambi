@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -61,11 +62,22 @@ public class NewsController {
         return "news";
     }
 
-    @GetMapping("/newsFull/{id}")
-    public String newsFull(@PathVariable long id, Model model) {
-        model.addAttribute("news", newsService.findOne(id));
-        return "newsFull";
-    }
+//    @GetMapping("/newsFull/{id}")
+//    public String newsFull(@PathVariable long id, Model model) {
+//        model.addAttribute("news", newsService.findOne(id));
+//        return "newsFull";
+//    }
+@GetMapping("/newsFull/{id}")
+public ModelAndView newsFull(@PathVariable long id, ModelAndView model) {
+        News item = newsService.findOne(id);
+        if (item == null){
+            model.setViewName("404");
+        }else {
+            model.setViewName("newsFull");
+            model.addObject("news",item);
+        }
+    return model;
+}
 
     @GetMapping("/newsTechnicallInformation")
     public String newsTechnicallInformation(Model model) {
@@ -74,11 +86,23 @@ public class NewsController {
         return "newsTechnicallInformation";
     }
 
-    @GetMapping("/newsTechnicallInformationFull/{id}")
-    public String newsTechnicallInformationFull(@PathVariable long id, Model model) {
-        model.addAttribute("newsTechnical", newsTechnicalService.findOne(id));
-        return "newsTechnicallInformationFull";
-    }
+//    @GetMapping("/newsTechnicallInformationFull/{id}")
+//    public String newsTechnicallInformationFull(@PathVariable long id, Model model) {
+//        model.addAttribute("newsTechnical", newsTechnicalService.findOne(id));
+//        return "newsTechnicallInformationFull";
+//    }
+@GetMapping("/newsTechnicallInformationFull/{id}")
+public ModelAndView newsTechnicallInformationFull(@PathVariable long id, ModelAndView model) {
+        NewsTechnical item = newsTechnicalService.findOne(id);
+        if (item == null){
+            model.setViewName("404");
+        }else {
+            model.setViewName("newsTechnicallInformationFull");
+            model.addObject("newsTechnical",item);
+        }
+//    model.addAttribute("newsTechnical", newsTechnicalService.findOne(id));
+    return model;
+}
 
     @GetMapping("/updateNews/{id}")
     public String updateNews(Model model, @PathVariable(value = "id") Long id) {

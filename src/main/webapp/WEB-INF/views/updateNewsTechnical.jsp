@@ -17,7 +17,7 @@
     <title>Euroricambi</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
     <meta name="viewport" content="width=device-width"/>
-    <link href="favicon.ico" rel="shortcut icon">
+    <link href="${pageContext.request.contextPath}/favicon.ico" rel="shortcut icon">
     <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
